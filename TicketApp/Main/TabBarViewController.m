@@ -31,11 +31,11 @@
     // 设置item位置的样式
     self.tabBar.itemPositioning = UITabBarItemPositioningCentered;
     //以下属性需要设置Centered样式才有作用，否则无效
-    self.tabBar.itemSpacing = 134.0f;
+    self.tabBar.itemSpacing = 33.5f;
     //设置item.title位置偏移
     UIOffset offset;
     offset.horizontal = 0;
-    offset.vertical = -3;
+    offset.vertical = -1.5;
     for (UITabBarItem *item in self.tabBar.items) {
         [item setTitlePositionAdjustment:offset];
     }

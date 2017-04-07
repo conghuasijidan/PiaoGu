@@ -12,6 +12,9 @@
 //通知宏
 #define YKNotificationLogin @"YKNotificationLogin"
 
+//普通宏定义
+#define YKMARKETCELL @"YKMarketTableViewCell"
+
 
 //颜色宏
 #define YKColor(r, g, b)  [UIColor colorWithRed:(r / 255.0f) green:(g / 255.0f) blue:(b / 255.0f) alpha:1.0]
@@ -28,7 +31,7 @@
 #ifdef  __OBJC__ //在该宏判断中的内容只会被OC相关的文件进行引用 xcode可以执行很多类型的源代码(.m .mm .c .cpp),如果被C语言或者C++引用了OC的内容就会导致冲突报错
 
 // 引入第三方类库
-//#import "SDCycleScrollView.h"
+#import "SDCycleScrollView.h"
 
 #import <YYModel/YYModel.h>
 #import <SVProgressHUD/SVProgressHUD.h>
