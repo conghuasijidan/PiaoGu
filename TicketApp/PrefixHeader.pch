@@ -37,6 +37,8 @@
 
 //#import <YYModel.h>
 //#import <UIImageView+WebCache.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+
 // 引入自定义类库
 #import "CategoryHeader.h"
 #import "YKNetWorkManager.h"
