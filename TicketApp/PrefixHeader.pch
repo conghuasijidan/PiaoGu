@@ -39,7 +39,7 @@
 //#import <UIImageView+WebCache.h>
 // 引入自定义类库
 #import "CategoryHeader.h"
-
+#import "YKNetWorkManager.h"
 #endif
 
 #endif /* PrefixHeader_pch */

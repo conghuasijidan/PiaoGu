@@ -12,7 +12,7 @@
 #import "YKMarketViewController.h"
 #import "YKMeViewController.h"
 
-@interface TabBarViewController ()
+@interface TabBarViewController ()<UITabBarDelegate,UITabBarControllerDelegate>
 
 @end
 
@@ -28,8 +28,24 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0x999999],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
     // 未选中时字体颜色0xFFEEDD
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0x999999],NSForegroundColorAttributeName,nil]forState:UIControlStateNormal];
+    // 设置item位置的样式
+    self.tabBar.itemPositioning = UITabBarItemPositioningCentered;
+    //以下属性需要设置Centered样式才有作用，否则无效
+    self.tabBar.itemSpacing = 134.0f;
+    //设置item.title位置偏移
+    UIOffset offset;
+    offset.horizontal = 0;
+    offset.vertical = -3;
+    for (UITabBarItem *item in self.tabBar.items) {
+        [item setTitlePositionAdjustment:offset];
+    }
     
+
 }
+
+
+
+
 - (void)setChildViewControllers{
     
     NSArray* array = @[
@@ -83,23 +99,5 @@
     return nav;
 }
 
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

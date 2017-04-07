@@ -33,20 +33,14 @@
     {
         viewController.navigationItem.title = @"票谷";
     }else {
-        viewController.navigationItem.title = @"我";
+        viewController.navigationItem.title = @"我的门店";
     }
     [viewController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar_background_image"] forBarMetrics:UIBarMetricsDefault];
     viewController.navigationController.navigationBar.translucent = NO;
-    viewController.navigationController.navigationBar.titleTextAttributes=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:17]};
+    viewController.navigationController.navigationBar.titleTextAttributes=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:17]};
     
 }
 
 
 
-- (void)searchAction{
-    
-//    YKLog(@"搜索按钮被点击了");
-    
-    
-}
 @end
