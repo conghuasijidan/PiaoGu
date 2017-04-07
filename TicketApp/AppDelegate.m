@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] init];
 //    NewFeatuerViewController *newFeatureVC = [[NewFeatuerViewController alloc] init];
     
-    //    self.window.rootViewController = newFeatureVC;
+//    self.window.rootViewController = newFeatureVC;
     
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
 

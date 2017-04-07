@@ -15,6 +15,7 @@
 		F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A111E972AB8004E3E4A /* YKMarketViewController.m */; };
 		F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A141E972ACA004E3E4A /* YKMeViewController.m */; };
 		F4423A1D1E9769A9004E3E4A /* YKNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A1C1E9769A9004E3E4A /* YKNetWorkManager.m */; };
+		F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A201E9774A0004E3E4A /* YKLoginViewController.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -41,6 +42,8 @@
 		F4423A141E972ACA004E3E4A /* YKMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMeViewController.m; sourceTree = "<group>"; };
 		F4423A1B1E9769A9004E3E4A /* YKNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNetWorkManager.h; sourceTree = "<group>"; };
 		F4423A1C1E9769A9004E3E4A /* YKNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNetWorkManager.m; sourceTree = "<group>"; };
+		F4423A1F1E9774A0004E3E4A /* YKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLoginViewController.h; sourceTree = "<group>"; };
+		F4423A201E9774A0004E3E4A /* YKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLoginViewController.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,6 +221,15 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		F4423A1E1E977481004E3E4A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A1F1E9774A0004E3E4A /* YKLoginViewController.h */,
+				F4423A201E9774A0004E3E4A /* YKLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F4BBFA881E9642D800043CEA = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +256,7 @@
 				F4423A1A1E9769A9004E3E4A /* Tools */,
 				F44239F91E9720DD004E3E4A /* Category */,
 				F44239F21E971DE4004E3E4A /* Main */,
+				F4423A1E1E977481004E3E4A /* Login */,
 				F4423A001E972A6E004E3E4A /* Class */,
 				F4BBFA941E9642D800043CEA /* Supporting Files */,
 			);
@@ -387,6 +400,7 @@
 			files = (
 				F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */,
 				F4423A0F1E972A9F004E3E4A /* YKHomeViewController.m in Sources */,
+				F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */,
 				F4423A1D1E9769A9004E3E4A /* YKNetWorkManager.m in Sources */,
 				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
 				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,
