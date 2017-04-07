@@ -14,8 +14,15 @@
 		F4423A0F1E972A9F004E3E4A /* YKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A0E1E972A9F004E3E4A /* YKHomeViewController.m */; };
 		F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A111E972AB8004E3E4A /* YKMarketViewController.m */; };
 		F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A141E972ACA004E3E4A /* YKMeViewController.m */; };
-		F4423A1D1E9769A9004E3E4A /* YKNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A1C1E9769A9004E3E4A /* YKNetWorkManager.m */; };
 		F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A201E9774A0004E3E4A /* YKLoginViewController.m */; };
+		F4423A251E977E78004E3E4A /* YKNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A241E977E78004E3E4A /* YKNetWorkManager.m */; };
+		F4423A381E97816D004E3E4A /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A2B1E97816D004E3E4A /* TAAbstractDotView.m */; };
+		F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A2D1E97816D004E3E4A /* TAAnimatedDotView.m */; };
+		F4423A3A1E97816D004E3E4A /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A2F1E97816D004E3E4A /* TADotView.m */; };
+		F4423A3B1E97816D004E3E4A /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A311E97816D004E3E4A /* TAPageControl.m */; };
+		F4423A3C1E97816D004E3E4A /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A331E97816D004E3E4A /* SDCollectionViewCell.m */; };
+		F4423A3D1E97816D004E3E4A /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A351E97816D004E3E4A /* SDCycleScrollView.m */; };
+		F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A371E97816D004E3E4A /* UIView+SDExtension.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -40,10 +47,24 @@
 		F4423A111E972AB8004E3E4A /* YKMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMarketViewController.m; sourceTree = "<group>"; };
 		F4423A131E972ACA004E3E4A /* YKMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMeViewController.h; sourceTree = "<group>"; };
 		F4423A141E972ACA004E3E4A /* YKMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMeViewController.m; sourceTree = "<group>"; };
-		F4423A1B1E9769A9004E3E4A /* YKNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNetWorkManager.h; sourceTree = "<group>"; };
-		F4423A1C1E9769A9004E3E4A /* YKNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNetWorkManager.m; sourceTree = "<group>"; };
 		F4423A1F1E9774A0004E3E4A /* YKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLoginViewController.h; sourceTree = "<group>"; };
 		F4423A201E9774A0004E3E4A /* YKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLoginViewController.m; sourceTree = "<group>"; };
+		F4423A231E977E78004E3E4A /* YKNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNetWorkManager.h; sourceTree = "<group>"; };
+		F4423A241E977E78004E3E4A /* YKNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNetWorkManager.m; sourceTree = "<group>"; };
+		F4423A2A1E97816D004E3E4A /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		F4423A2B1E97816D004E3E4A /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		F4423A2C1E97816D004E3E4A /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		F4423A2D1E97816D004E3E4A /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		F4423A2E1E97816D004E3E4A /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		F4423A2F1E97816D004E3E4A /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		F4423A301E97816D004E3E4A /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		F4423A311E97816D004E3E4A /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		F4423A321E97816D004E3E4A /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		F4423A331E97816D004E3E4A /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		F4423A341E97816D004E3E4A /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		F4423A351E97816D004E3E4A /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		F4423A361E97816D004E3E4A /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		F4423A371E97816D004E3E4A /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -215,8 +236,9 @@
 		F4423A1A1E9769A9004E3E4A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				F4423A1B1E9769A9004E3E4A /* YKNetWorkManager.h */,
-				F4423A1C1E9769A9004E3E4A /* YKNetWorkManager.m */,
+				F4423A261E977EB0004E3E4A /* DataTool */,
+				F4423A221E977E78004E3E4A /* NetWorkTool */,
+				F4423A271E977EB0004E3E4A /* Lib */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -228,6 +250,59 @@
 				F4423A201E9774A0004E3E4A /* YKLoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F4423A221E977E78004E3E4A /* NetWorkTool */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A231E977E78004E3E4A /* YKNetWorkManager.h */,
+				F4423A241E977E78004E3E4A /* YKNetWorkManager.m */,
+			);
+			path = NetWorkTool;
+			sourceTree = "<group>";
+		};
+		F4423A261E977EB0004E3E4A /* DataTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataTool;
+			sourceTree = "<group>";
+		};
+		F4423A271E977EB0004E3E4A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A281E97816D004E3E4A /* SDCycleScrollView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		F4423A281E97816D004E3E4A /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A291E97816D004E3E4A /* PageControl */,
+				F4423A321E97816D004E3E4A /* SDCollectionViewCell.h */,
+				F4423A331E97816D004E3E4A /* SDCollectionViewCell.m */,
+				F4423A341E97816D004E3E4A /* SDCycleScrollView.h */,
+				F4423A351E97816D004E3E4A /* SDCycleScrollView.m */,
+				F4423A361E97816D004E3E4A /* UIView+SDExtension.h */,
+				F4423A371E97816D004E3E4A /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		F4423A291E97816D004E3E4A /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A2A1E97816D004E3E4A /* TAAbstractDotView.h */,
+				F4423A2B1E97816D004E3E4A /* TAAbstractDotView.m */,
+				F4423A2C1E97816D004E3E4A /* TAAnimatedDotView.h */,
+				F4423A2D1E97816D004E3E4A /* TAAnimatedDotView.m */,
+				F4423A2E1E97816D004E3E4A /* TADotView.h */,
+				F4423A2F1E97816D004E3E4A /* TADotView.m */,
+				F4423A301E97816D004E3E4A /* TAPageControl.h */,
+				F4423A311E97816D004E3E4A /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -398,16 +473,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4423A251E977E78004E3E4A /* YKNetWorkManager.m in Sources */,
+				F4423A3A1E97816D004E3E4A /* TADotView.m in Sources */,
 				F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */,
 				F4423A0F1E972A9F004E3E4A /* YKHomeViewController.m in Sources */,
+				F4423A381E97816D004E3E4A /* TAAbstractDotView.m in Sources */,
 				F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */,
-				F4423A1D1E9769A9004E3E4A /* YKNetWorkManager.m in Sources */,
 				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
+				F4423A3B1E97816D004E3E4A /* TAPageControl.m in Sources */,
+				F4423A3C1E97816D004E3E4A /* SDCollectionViewCell.m in Sources */,
 				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
+				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
 				F4BBFA961E9642D800043CEA /* main.m in Sources */,
 				F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */,
+				F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */,
+				F4423A3D1E97816D004E3E4A /* SDCycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,16 +28,13 @@
 #ifdef  __OBJC__ //在该宏判断中的内容只会被OC相关的文件进行引用 xcode可以执行很多类型的源代码(.m .mm .c .cpp),如果被C语言或者C++引用了OC的内容就会导致冲突报错
 
 // 引入第三方类库
-// 没有使用Pod的情况下
-//#import "Masonry.h"
-//#import "YYModel.h"
 //#import "SDCycleScrollView.h"
-//#import "UIImageView+WebCache.h"
 
-
-//#import <YYModel.h>
-//#import <UIImageView+WebCache.h>
+#import <YYModel/YYModel.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <MJRefresh/MJRefresh.h>
 
 // 引入自定义类库
 #import "CategoryHeader.h"
