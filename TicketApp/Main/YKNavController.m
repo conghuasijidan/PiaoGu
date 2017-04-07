@@ -7,7 +7,9 @@
 //
 
 #import "YKNavController.h"
-
+#import "YKHomeViewController.h"
+#import "YKMarketViewController.h"
+#import "YKMeViewController.h"
 @interface YKNavController ()<UINavigationControllerDelegate>
 
 @end
@@ -22,16 +24,20 @@
 // 先走的是代理方法后走的是各个控制器的viewDidLoad方法
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    //设置title为图片
-    viewController.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"food+"]];
-    
-    UIButton *button = [[UIButton alloc] init];
-    [button setImage:[UIImage imageNamed:@"icon_home_search_index"] forState:UIControlStateNormal];
-    [button sizeToFit];
-    [button addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
-    [button setHighlighted:NO];
-    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-
+    //设置每个控制器的title
+    if ([viewController isKindOfClass:[YKHomeViewController class]]) {
+        viewController.navigationItem.title = @"首页";
+//        viewController.navigationItem
+        
+    }else if ([viewController isKindOfClass:[YKMarketViewController class]])
+    {
+        viewController.navigationItem.title = @"票谷";
+    }else {
+        viewController.navigationItem.title = @"我";
+    }
+    [viewController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar_background_image"] forBarMetrics:UIBarMetricsDefault];
+    viewController.navigationController.navigationBar.translucent = NO;
+    viewController.navigationController.navigationBar.titleTextAttributes=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:17]};
     
 }
 

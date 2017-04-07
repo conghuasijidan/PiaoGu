@@ -24,10 +24,10 @@
     
     [self setChildViewControllers];
     // 改变tabBar的字体颜色
-    //   RGB（216 186 146）
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
-    // 未选中时字体颜色（146 146 146）
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:999999],NSForegroundColorAttributeName,nil]forState:UIControlStateNormal];
+    //   
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0x999999],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
+    // 未选中时字体颜色0xFFEEDD
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0x999999],NSForegroundColorAttributeName,nil]forState:UIControlStateNormal];
     
 }
 - (void)setChildViewControllers{
@@ -36,21 +36,21 @@
                        @{
                            @"className" : @"YKHomeViewController",
                            @"title" : @"首页",
-                           @"imageName" : @"home",
-                           @"imageName_selected" : @"home_press"
+                           @"imageName" : @"home_tabBar_normal",
+                           @"imageName_selected" : @"home_tabBar_selected"
                            },
                        @{
                            @"className" : @"YKMarketViewController",
                            @"title" : @"市场",
-                           @"imageName" : @"special",
-                           @"imageName_selected" : @"special_press"
+                           @"imageName" : @"market_tabBar_normal",
+                           @"imageName_selected" : @"market_tabBar_selected"
                            },
                        
                        @{
                            @"className" : @"YKMeViewController",
-                           @"title" : @"我",
-                           @"imageName" : @"me",
-                           @"imageName_selected" : @"me_press"
+                           @"title" : @"我的",
+                           @"imageName" : @"me_tabBar_normal",
+                           @"imageName_selected" : @"me_tabBar_selected"
                            }
                        ];
     
@@ -79,7 +79,7 @@
     
     viewController.tabBarItem.selectedImage = [[UIImage imageNamed:dict[@"imageName_selected"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] ;
     YKNavController *nav = [[YKNavController alloc] initWithRootViewController:viewController];
-    
+    viewController.navigationItem.title = @"首页";
     return nav;
 }
 

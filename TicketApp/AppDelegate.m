@@ -32,6 +32,8 @@
     //注册通知 别忘了移除通知
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chageRootViewController) name:YKNotificationLogin object:nil];
     
+    // 设置全局状态栏颜色为白色
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;
 }
