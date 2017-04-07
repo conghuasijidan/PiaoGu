@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FAEA6B536417DB6ECC340A5 /* Pods_TicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */; };
 		F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F41E971DE4004E3E4A /* TabBarViewController.m */; };
 		F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F61E971DE4004E3E4A /* YKNavController.m */; };
 		F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FD23CB1DE8FC5037980DE87 /* Pods-TicketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp.release.xcconfig"; sourceTree = "<group>"; };
+		D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44239F31E971DE4004E3E4A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		F44239F41E971DE4004E3E4A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		F44239F51E971DE4004E3E4A /* YKNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNavController.h; sourceTree = "<group>"; };
@@ -51,12 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FAEA6B536417DB6ECC340A5 /* Pods_TicketApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63D6487139A073869E801ADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E21DCB9C7F443F29B416344B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FD23CB1DE8FC5037980DE87 /* Pods-TicketApp.debug.xcconfig */,
+				5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F44239F21E971DE4004E3E4A /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +223,8 @@
 			children = (
 				F4BBFA931E9642D800043CEA /* TicketApp */,
 				F4BBFA921E9642D800043CEA /* Products */,
+				E21DCB9C7F443F29B416344B /* Pods */,
+				63D6487139A073869E801ADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4BBFAA81E9642D800043CEA /* Build configuration list for PBXNativeTarget "TicketApp" */;
 			buildPhases = (
+				4CAED305F4FF12AA167C52BD /* [CP] Check Pods Manifest.lock */,
 				F4BBFA8D1E9642D800043CEA /* Sources */,
 				F4BBFA8E1E9642D800043CEA /* Frameworks */,
 				F4BBFA8F1E9642D800043CEA /* Resources */,
+				2AFBF0BC241BFC215C01CBC3 /* [CP] Embed Pods Frameworks */,
+				1214FB50AB1C45347C7ABDE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +331,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1214FB50AB1C45347C7ABDE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AFBF0BC241BFC215C01CBC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CAED305F4FF12AA167C52BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4BBFA8D1E9642D800043CEA /* Sources */ = {
@@ -430,6 +505,7 @@
 		};
 		F4BBFAA91E9642D800043CEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FD23CB1DE8FC5037980DE87 /* Pods-TicketApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DHBXPM53W4;
@@ -446,6 +522,7 @@
 		};
 		F4BBFAAA1E9642D800043CEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DHBXPM53W4;
