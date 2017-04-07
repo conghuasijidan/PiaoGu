@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  TicketApp
+//
+//  Created by 葱花思鸡蛋 on 2017/4/7.
+//  Copyright © 2017年 hangzhouzhulongkeji. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//通知宏
+#define YKNotificationLogin @"YKNotificationLogin"
+
+
+//颜色宏
+#define YKColor(r, g, b)  [UIColor colorWithRed:(r / 255.0f) green:(g / 255.0f) blue:(b / 255.0f) alpha:1.0]
+
+//打印宏
+#ifdef DEBUG  //在DEBUG模式下,执行下边的打印(文件&行数&内容)
+#define YKLog(fmt, ...)  fprintf(stderr,"%s文件:第%d行\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
+
+#else //在Releaser模式下,取消打印宏(打印非常影响性能,手动注释比较麻烦)
+#define YKLog(...)
+#endif
+
+// 防止错误的引用
+#ifdef  __OBJC__ //在该宏判断中的内容只会被OC相关的文件进行引用 xcode可以执行很多类型的源代码(.m .mm .c .cpp),如果被C语言或者C++引用了OC的内容就会导致冲突报错
+
+// 引入第三方类库
+// 没有使用Pod的情况下
+//#import "Masonry.h"
+//#import "YYModel.h"
+//#import "SDCycleScrollView.h"
+//#import "UIImageView+WebCache.h"
+
+
+//#import <YYModel.h>
+//#import <UIImageView+WebCache.h>
+// 引入自定义类库
+#import "CategoryHeader.h"
+
+#endif
+
+#endif /* PrefixHeader_pch */

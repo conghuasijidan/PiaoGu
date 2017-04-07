@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TabBarViewController.h"
+#import "YKNavController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] init];
+//    NewFeatuerViewController *newFeatureVC = [[NewFeatuerViewController alloc] init];
+    
+    //    self.window.rootViewController = newFeatureVC;
+    
+    TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
+
+    self.window.rootViewController = tabBarVC;
+    
+    [self.window makeKeyAndVisible];
+    //注册通知 别忘了移除通知
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chageRootViewController) name:YKNotificationLogin object:nil];
+    
+    
     return YES;
 }
 

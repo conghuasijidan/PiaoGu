@@ -7,22 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F41E971DE4004E3E4A /* TabBarViewController.m */; };
+		F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F61E971DE4004E3E4A /* YKNavController.m */; };
+		F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */; };
+		F4423A0F1E972A9F004E3E4A /* YKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A0E1E972A9F004E3E4A /* YKHomeViewController.m */; };
+		F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A111E972AB8004E3E4A /* YKMarketViewController.m */; };
+		F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A141E972ACA004E3E4A /* YKMeViewController.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
-		F4BBFA9C1E9642D800043CEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA9B1E9642D800043CEA /* ViewController.m */; };
-		F4BBFA9F1E9642D800043CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFA9D1E9642D800043CEA /* Main.storyboard */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
 		F4BBFAA41E9642D800043CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA21E9642D800043CEA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F44239F31E971DE4004E3E4A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		F44239F41E971DE4004E3E4A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		F44239F51E971DE4004E3E4A /* YKNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNavController.h; sourceTree = "<group>"; };
+		F44239F61E971DE4004E3E4A /* YKNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNavController.m; sourceTree = "<group>"; };
+		F44239FA1E9720DD004E3E4A /* UIColor+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addtion.h"; sourceTree = "<group>"; };
+		F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addtion.m"; sourceTree = "<group>"; };
+		F44239FE1E97246B004E3E4A /* CategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryHeader.h; sourceTree = "<group>"; };
+		F44239FF1E972814004E3E4A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F4423A0D1E972A9F004E3E4A /* YKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeViewController.h; sourceTree = "<group>"; };
+		F4423A0E1E972A9F004E3E4A /* YKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeViewController.m; sourceTree = "<group>"; };
+		F4423A101E972AB8004E3E4A /* YKMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMarketViewController.h; sourceTree = "<group>"; };
+		F4423A111E972AB8004E3E4A /* YKMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMarketViewController.m; sourceTree = "<group>"; };
+		F4423A131E972ACA004E3E4A /* YKMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMeViewController.h; sourceTree = "<group>"; };
+		F4423A141E972ACA004E3E4A /* YKMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMeViewController.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4BBFA981E9642D800043CEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F4BBFA9A1E9642D800043CEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F4BBFA9B1E9642D800043CEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F4BBFA9E1E9642D800043CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4BBFAA01E9642D800043CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4BBFAA31E9642D800043CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4BBFAA51E9642D800043CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +54,136 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F44239F21E971DE4004E3E4A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F44239F31E971DE4004E3E4A /* TabBarViewController.h */,
+				F44239F41E971DE4004E3E4A /* TabBarViewController.m */,
+				F44239F51E971DE4004E3E4A /* YKNavController.h */,
+				F44239F61E971DE4004E3E4A /* YKNavController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F44239F91E9720DD004E3E4A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F44239FE1E97246B004E3E4A /* CategoryHeader.h */,
+				F44239FA1E9720DD004E3E4A /* UIColor+Addtion.h */,
+				F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F4423A001E972A6E004E3E4A /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A011E972A6E004E3E4A /* Home */,
+				F4423A051E972A6E004E3E4A /* Market */,
+				F4423A091E972A6E004E3E4A /* Me */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F4423A011E972A6E004E3E4A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A021E972A6E004E3E4A /* Controller */,
+				F4423A031E972A6E004E3E4A /* Model */,
+				F4423A041E972A6E004E3E4A /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4423A021E972A6E004E3E4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A0D1E972A9F004E3E4A /* YKHomeViewController.h */,
+				F4423A0E1E972A9F004E3E4A /* YKHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4423A031E972A6E004E3E4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4423A041E972A6E004E3E4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4423A051E972A6E004E3E4A /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A061E972A6E004E3E4A /* Controller */,
+				F4423A071E972A6E004E3E4A /* Model */,
+				F4423A081E972A6E004E3E4A /* View */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		F4423A061E972A6E004E3E4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A101E972AB8004E3E4A /* YKMarketViewController.h */,
+				F4423A111E972AB8004E3E4A /* YKMarketViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4423A071E972A6E004E3E4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4423A081E972A6E004E3E4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4423A091E972A6E004E3E4A /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A0A1E972A6E004E3E4A /* Controller */,
+				F4423A0B1E972A6E004E3E4A /* Model */,
+				F4423A0C1E972A6E004E3E4A /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		F4423A0A1E972A6E004E3E4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A131E972ACA004E3E4A /* YKMeViewController.h */,
+				F4423A141E972ACA004E3E4A /* YKMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4423A0B1E972A6E004E3E4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4423A0C1E972A6E004E3E4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F4BBFA881E9642D800043CEA = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +205,9 @@
 			children = (
 				F4BBFA971E9642D800043CEA /* AppDelegate.h */,
 				F4BBFA981E9642D800043CEA /* AppDelegate.m */,
-				F4BBFA9A1E9642D800043CEA /* ViewController.h */,
-				F4BBFA9B1E9642D800043CEA /* ViewController.m */,
-				F4BBFA9D1E9642D800043CEA /* Main.storyboard */,
+				F44239F91E9720DD004E3E4A /* Category */,
+				F44239F21E971DE4004E3E4A /* Main */,
+				F4423A001E972A6E004E3E4A /* Class */,
 				F4BBFA941E9642D800043CEA /* Supporting Files */,
 			);
 			path = TicketApp;
@@ -75,6 +220,7 @@
 				F4BBFAA21E9642D800043CEA /* LaunchScreen.storyboard */,
 				F4BBFAA51E9642D800043CEA /* Info.plist */,
 				F4BBFA951E9642D800043CEA /* main.m */,
+				F44239FF1E972814004E3E4A /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -105,6 +251,7 @@
 		F4BBFA891E9642D800043CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YK;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = hangzhouzhulongkeji;
 				TargetAttributes = {
@@ -140,7 +287,6 @@
 			files = (
 				F4BBFAA41E9642D800043CEA /* LaunchScreen.storyboard in Resources */,
 				F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */,
-				F4BBFA9F1E9642D800043CEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,23 +297,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4BBFA9C1E9642D800043CEA /* ViewController.m in Sources */,
 				F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */,
+				F4423A0F1E972A9F004E3E4A /* YKHomeViewController.m in Sources */,
+				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
+				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,
+				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
+				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
 				F4BBFA961E9642D800043CEA /* main.m in Sources */,
+				F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F4BBFA9D1E9642D800043CEA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4BBFA9E1E9642D800043CEA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F4BBFAA21E9642D800043CEA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,6 +419,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DHBXPM53W4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TicketApp/PrefixHeader.pch";
 				INFOPLIST_FILE = TicketApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -290,6 +435,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DHBXPM53W4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TicketApp/PrefixHeader.pch";
 				INFOPLIST_FILE = TicketApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
