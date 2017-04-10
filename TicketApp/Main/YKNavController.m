@@ -32,13 +32,22 @@
     }else if ([viewController isKindOfClass:[YKMarketViewController class]])
     {
         viewController.navigationItem.title = @"票谷";
-    }else {
+    }else if ([viewController isKindOfClass:[YKMeViewController class]]){
         viewController.navigationItem.title = @"我的门店";
     }
+    // 设置通用的导航栏背景颜色
     [viewController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar_background_image"] forBarMetrics:UIBarMetricsDefault];
     viewController.navigationController.navigationBar.translucent = NO;
     viewController.navigationController.navigationBar.titleTextAttributes=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:17]};
     
+    //设置通用的返回按钮
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(backBarButtonItemAction)];
+    
+    viewController.navigationItem.backBarButtonItem = backBarButtonItem;
+    
+}
+- (void)backBarButtonItemAction{
+    [self popViewControllerAnimated:YES];
 }
 
 

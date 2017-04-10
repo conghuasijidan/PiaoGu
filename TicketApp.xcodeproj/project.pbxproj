@@ -25,6 +25,8 @@
 		F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A371E97816D004E3E4A /* UIView+SDExtension.m */; };
 		F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */; };
 		F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */; };
+		F4423AB11E9B5FE4004E3E4A /* YKInvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */; };
+		F4423AB41E9B5FF4004E3E4A /* YKIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -71,6 +73,10 @@
 		F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMarketTableViewCell.m; sourceTree = "<group>"; };
 		F4423AA61E9B21C3004E3E4A /* UIScreen+YKScreenTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+YKScreenTools.h"; sourceTree = "<group>"; };
 		F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+YKScreenTools.m"; sourceTree = "<group>"; };
+		F4423AAF1E9B5FE4004E3E4A /* YKInvestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKInvestViewController.h; sourceTree = "<group>"; };
+		F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKInvestViewController.m; sourceTree = "<group>"; };
+		F4423AB21E9B5FF4004E3E4A /* YKIncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKIncomeViewController.h; sourceTree = "<group>"; };
+		F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKIncomeViewController.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +196,10 @@
 			children = (
 				F4423A101E972AB8004E3E4A /* YKMarketViewController.h */,
 				F4423A111E972AB8004E3E4A /* YKMarketViewController.m */,
+				F4423AAF1E9B5FE4004E3E4A /* YKInvestViewController.h */,
+				F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */,
+				F4423AB21E9B5FF4004E3E4A /* YKIncomeViewController.h */,
+				F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -498,8 +508,10 @@
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
+				F4423AB11E9B5FE4004E3E4A /* YKInvestViewController.m in Sources */,
 				F4BBFA961E9642D800043CEA /* main.m in Sources */,
 				F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */,
+				F4423AB41E9B5FF4004E3E4A /* YKIncomeViewController.m in Sources */,
 				F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */,
 				F4423A3D1E97816D004E3E4A /* SDCycleScrollView.m in Sources */,
 			);

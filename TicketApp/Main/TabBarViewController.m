@@ -98,7 +98,7 @@
     
     viewController.tabBarItem.selectedImage = [[UIImage imageNamed:dict[@"imageName_selected"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] ;
     YKNavController *nav = [[YKNavController alloc] initWithRootViewController:viewController];
-    viewController.navigationItem.title = @"首页";
+    
     return nav;
 }
 
