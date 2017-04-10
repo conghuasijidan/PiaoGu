@@ -32,6 +32,9 @@
     self.tabBar.itemPositioning = UITabBarItemPositioningCentered;
     //以下属性需要设置Centered样式才有作用，否则无效
     self.tabBar.itemSpacing = 33.5f;
+    
+    self.tabBar.backgroundColor = [UIColor whiteColor];
+    self.tabBar.translucent = NO;
     //设置item.title位置偏移
     UIOffset offset;
     offset.horizontal = 0;

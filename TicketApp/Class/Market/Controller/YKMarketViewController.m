@@ -37,6 +37,10 @@
     marketTableView.dataSource = self;
     marketTableView.delegate = self;
     [marketTableView registerClass:[YKMarketTableViewCell class] forCellReuseIdentifier:YKMARKETCELL];
+    marketTableView.estimatedRowHeight = 162;
+    marketTableView.rowHeight = UITableViewAutomaticDimension;
+    // 去掉表格分割线
+    marketTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:marketTableView];
     self.marketTabView = marketTableView;
     [self setupHeaderView];
@@ -51,6 +55,16 @@
     self.marketTabView.tableHeaderView = headerView;
 
     // 设置轮播器
+    UIView *cycleBgView = [[UIView alloc] init];
+    cycleBgView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
+    [headerView addSubview:cycleBgView];
+    [cycleBgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(headerView);
+        make.right.equalTo(headerView);
+        make.height.mas_equalTo(SCROLLHEIGHT+kSPACING);
+    }];
+
+    
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"market_advertisement_placeholder"]];
     cycleScrollView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
@@ -58,17 +72,17 @@
     cycleScrollView.pageDotColor = [UIColor colorWithWhite:1.0 alpha:0.6];
     cycleScrollView.pageControlDotSize = CGSizeMake(3.0, 3.0);
     // 设置分页指示器的位置
-    cycleScrollView.pageControlBottomOffset = 5.0;
+    cycleScrollView.pageControlBottomOffset = kSPACING*0.5;
     // _imgLists 设置网络数据 必须有值
     // cycleScrollView.imageURLStringsGroup = _imgLists;
     // 设置本地数据
     cycleScrollView.localizationImageNamesGroup = _scrollImageList;
-    [headerView addSubview:cycleScrollView];
+    [cycleBgView addSubview:cycleScrollView];
     // 需要适配高度
     [cycleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(headerView).offset(5);
-        make.right.equalTo(headerView).offset(-5);
-        make.height.mas_equalTo(SCROLLHEIGHT);
+        make.left.top.equalTo(cycleBgView).offset(kSPACING*0.5);
+        make.right.equalTo(cycleBgView).offset(-kSPACING*0.5);
+        make.bottom.equalTo(cycleBgView).offset(-kSPACING*0.5);
     }];
     
     
@@ -77,7 +91,7 @@
     [headerView addSubview:bgview];
     [bgview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(headerView);
-        make.top.equalTo(cycleScrollView.mas_bottom);
+        make.top.equalTo(cycleBgView.mas_bottom);
         make.bottom.equalTo(headerView);
     }];
     
@@ -86,11 +100,10 @@
     [investBtn setImage:[UIImage imageNamed:@"market_investBtn_normal"] forState:UIControlStateNormal];
     [bgview addSubview:investBtn];
     
-    CGFloat width = (self.view.bounds.size.width-15)*0.5;
     [investBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(bgview).offset(5);
-        make.top.equalTo(bgview).offset(10);
-        make.width.mas_equalTo(width);
+        make.left.equalTo(bgview).offset(kSPACING);
+        make.top.equalTo(bgview).offset(kSPACING);
+        make.right.equalTo(bgview.mas_centerX).offset(-kSPACING*0.5);
         make.height.mas_equalTo(64);
     }];
     
@@ -100,9 +113,10 @@
     [bgview addSubview:incomeBtn];
     
     [incomeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(investBtn.mas_right).offset(5);
-        make.top.bottom.equalTo(investBtn);
-        make.right.equalTo(bgview).offset(-5);
+        make.left.equalTo(bgview.mas_centerX).offset(kSPACING*0.5);
+        make.top.equalTo(investBtn);
+        make.height.equalTo(investBtn);
+        make.right.equalTo(bgview).offset(-kSPACING);
     }];
 
     UIView *lineBgView = [[UIView alloc] init];
@@ -171,8 +185,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YKMarketTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKMARKETCELL forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor grayColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
+}
+#pragma mark - 实现UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YKLog(@"跳转详情页");
 }
 
 
