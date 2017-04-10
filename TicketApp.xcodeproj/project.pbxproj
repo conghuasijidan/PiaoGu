@@ -24,6 +24,7 @@
 		F4423A3D1E97816D004E3E4A /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A351E97816D004E3E4A /* SDCycleScrollView.m */; };
 		F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A371E97816D004E3E4A /* UIView+SDExtension.m */; };
 		F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */; };
+		F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -68,6 +69,8 @@
 		F4423A371E97816D004E3E4A /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		F4423A3F1E978396004E3E4A /* YKMarketTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMarketTableViewCell.h; sourceTree = "<group>"; };
 		F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMarketTableViewCell.m; sourceTree = "<group>"; };
+		F4423AA61E9B21C3004E3E4A /* UIScreen+YKScreenTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+YKScreenTools.h"; sourceTree = "<group>"; };
+		F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+YKScreenTools.m"; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				F44239FE1E97246B004E3E4A /* CategoryHeader.h */,
 				F44239FA1E9720DD004E3E4A /* UIColor+Addtion.h */,
 				F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */,
+				F4423AA61E9B21C3004E3E4A /* UIScreen+YKScreenTools.h */,
+				F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -486,6 +491,7 @@
 				F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */,
 				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
 				F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */,
+				F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */,
 				F4423A3B1E97816D004E3E4A /* TAPageControl.m in Sources */,
 				F4423A3C1E97816D004E3E4A /* SDCollectionViewCell.m in Sources */,
 				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,

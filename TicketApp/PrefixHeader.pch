@@ -14,6 +14,7 @@
 
 //普通宏定义
 #define YKMARKETCELL @"YKMarketTableViewCell"
+#define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 
 
 //颜色宏

@@ -8,6 +8,13 @@
 
 #import "YKMarketTableViewCell.h"
 
+@interface YKMarketTableViewCell ()
+@property(nonatomic,weak)UIImageView *imgView;
+
+
+
+@end
+
 @implementation YKMarketTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -21,7 +28,17 @@
 
 #pragma mark - 搭建界面
 - (void)setupUI{
-    self.backgroundColor = [UIColor yk_randomColor];
+    UIImageView *imgView = [[UIImageView alloc] init];
+    imgView.image = [UIImage imageNamed:@"market_cell_placehoder"];
+    [self.contentView addSubview:imgView];
+    self.imgView = imgView;
+   [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+       make.left.equalTo(self.contentView).offset(5);
+       make.right.equalTo(self.contentView).offset(-5);
+       make.top.equalTo(self.contentView);
+       make.height.mas_equalTo(120);
+   }];
+
 }
 
 
