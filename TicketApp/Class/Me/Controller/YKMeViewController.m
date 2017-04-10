@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.navigationItem.title = @"我的门店";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.title = @"收益票";
+    self.navigationItem.title = @"收益票";
 }
 
 - (void)didReceiveMemoryWarning {

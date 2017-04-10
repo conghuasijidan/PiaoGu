@@ -27,6 +27,7 @@
 		F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */; };
 		F4423AB11E9B5FE4004E3E4A /* YKInvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */; };
 		F4423AB41E9B5FF4004E3E4A /* YKIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */; };
+		F4423AB71E9B709C004E3E4A /* YKInvestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AB61E9B709C004E3E4A /* YKInvestTableViewCell.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -77,6 +78,8 @@
 		F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKInvestViewController.m; sourceTree = "<group>"; };
 		F4423AB21E9B5FF4004E3E4A /* YKIncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKIncomeViewController.h; sourceTree = "<group>"; };
 		F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKIncomeViewController.m; sourceTree = "<group>"; };
+		F4423AB51E9B709C004E3E4A /* YKInvestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKInvestTableViewCell.h; sourceTree = "<group>"; };
+		F4423AB61E9B709C004E3E4A /* YKInvestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKInvestTableViewCell.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,10 +199,8 @@
 			children = (
 				F4423A101E972AB8004E3E4A /* YKMarketViewController.h */,
 				F4423A111E972AB8004E3E4A /* YKMarketViewController.m */,
-				F4423AAF1E9B5FE4004E3E4A /* YKInvestViewController.h */,
-				F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */,
-				F4423AB21E9B5FF4004E3E4A /* YKIncomeViewController.h */,
-				F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */,
+				F4423AB81E9B70AA004E3E4A /* 投资宝 */,
+				F4423AB91E9B70B9004E3E4A /* 收益票 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +217,8 @@
 			children = (
 				F4423A3F1E978396004E3E4A /* YKMarketTableViewCell.h */,
 				F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */,
+				F4423AB51E9B709C004E3E4A /* YKInvestTableViewCell.h */,
+				F4423AB61E9B709C004E3E4A /* YKInvestTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +326,24 @@
 				F4423A311E97816D004E3E4A /* TAPageControl.m */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		F4423AB81E9B70AA004E3E4A /* 投资宝 */ = {
+			isa = PBXGroup;
+			children = (
+				F4423AAF1E9B5FE4004E3E4A /* YKInvestViewController.h */,
+				F4423AB01E9B5FE4004E3E4A /* YKInvestViewController.m */,
+			);
+			name = "投资宝";
+			sourceTree = "<group>";
+		};
+		F4423AB91E9B70B9004E3E4A /* 收益票 */ = {
+			isa = PBXGroup;
+			children = (
+				F4423AB21E9B5FF4004E3E4A /* YKIncomeViewController.h */,
+				F4423AB31E9B5FF4004E3E4A /* YKIncomeViewController.m */,
+			);
+			name = "收益票";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -505,6 +526,7 @@
 				F4423A3B1E97816D004E3E4A /* TAPageControl.m in Sources */,
 				F4423A3C1E97816D004E3E4A /* SDCollectionViewCell.m in Sources */,
 				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,
+				F4423AB71E9B709C004E3E4A /* YKInvestTableViewCell.m in Sources */,
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
