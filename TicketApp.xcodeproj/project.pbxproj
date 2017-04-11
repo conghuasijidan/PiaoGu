@@ -206,8 +206,8 @@
 				F4423A101E972AB8004E3E4A /* YKMarketViewController.h */,
 				F4423A111E972AB8004E3E4A /* YKMarketViewController.m */,
 				F4423AB81E9B70AA004E3E4A /* 投资宝 */,
-				F4423ABD1E9C6911004E3E4A /* 产品详情 */,
 				F4423AB91E9B70B9004E3E4A /* 收益票 */,
+				F4423ABD1E9C6911004E3E4A /* 产品详情 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,12 +222,9 @@
 		F4423A081E972A6E004E3E4A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4423A3F1E978396004E3E4A /* YKMarketTableViewCell.h */,
-				F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */,
-				F4423AB51E9B709C004E3E4A /* YKInvestTableViewCell.h */,
-				F4423AB61E9B709C004E3E4A /* YKInvestTableViewCell.m */,
-				F4423ABE1E9C7C40004E3E4A /* YKIncomeTableViewCell.h */,
-				F4423ABF1E9C7C40004E3E4A /* YKIncomeTableViewCell.m */,
+				F4423AC11E9C87D2004E3E4A /* 市场cell */,
+				F4423AC21E9C87ED004E3E4A /* 投资宝cell */,
+				F4423AC31E9C8802004E3E4A /* 收益票cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +359,33 @@
 				F4423ABB1E9C690C004E3E4A /* YKDetailViewController.m */,
 			);
 			name = "产品详情";
+			sourceTree = "<group>";
+		};
+		F4423AC11E9C87D2004E3E4A /* 市场cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4423A3F1E978396004E3E4A /* YKMarketTableViewCell.h */,
+				F4423A401E978396004E3E4A /* YKMarketTableViewCell.m */,
+			);
+			name = "市场cell";
+			sourceTree = "<group>";
+		};
+		F4423AC21E9C87ED004E3E4A /* 投资宝cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4423AB51E9B709C004E3E4A /* YKInvestTableViewCell.h */,
+				F4423AB61E9B709C004E3E4A /* YKInvestTableViewCell.m */,
+			);
+			name = "投资宝cell";
+			sourceTree = "<group>";
+		};
+		F4423AC31E9C8802004E3E4A /* 收益票cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4423ABE1E9C7C40004E3E4A /* YKIncomeTableViewCell.h */,
+				F4423ABF1E9C7C40004E3E4A /* YKIncomeTableViewCell.m */,
+			);
+			name = "收益票cell";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {

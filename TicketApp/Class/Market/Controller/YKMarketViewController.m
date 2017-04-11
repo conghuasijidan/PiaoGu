@@ -14,6 +14,7 @@
 
 #define SCROLLHEIGHT 196
 #define BGVIEWHEIGHT 104
+#define HEADERHEIGHT 320
 @interface YKMarketViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
 @property(nonatomic,weak)UITableView *marketTabView;
 
@@ -51,10 +52,10 @@
 }
 
 
-#pragma mark - 设置头部视图 未适配屏幕
+#pragma mark - 设置头部视图
 - (void)setupHeaderView{
     // 设置tableview的HEADER
-    UIView *headerView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,SCROLLHEIGHT + 124)];
+    UIView *headerView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen yk_screenWidth] ,HEADERHEIGHT)];
     headerView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
     self.marketTabView.tableHeaderView = headerView;
 
