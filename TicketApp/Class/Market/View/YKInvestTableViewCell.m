@@ -92,7 +92,11 @@
 #pragma mark - 跳转详情页面
 - (void)detailButtonAction{
     YKLog(@"跳转详情页面");
-    
+    if (self.detailBlock != nil) {
+        NSString *model = @"我是model";
+        self.detailBlock(model);
+    }
+
 }
 
 

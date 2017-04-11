@@ -8,7 +8,7 @@
 
 #import "YKInvestViewController.h"
 #import "YKInvestTableViewCell.h"
-
+#import "YKDetailViewController.h"
 #define kHEADERHEIGHT 70
 
 @interface YKInvestViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -93,7 +93,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YKInvestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKINVESTCELL forIndexPath:indexPath];
-    
+    cell.detailBlock = ^(NSString *model) {
+        
+        YKDetailViewController *detailVC = [[YKDetailViewController alloc] init];
+        
+        [self.navigationController pushViewController:detailVC animated:YES];
+
+    };
     return cell;
 }
 

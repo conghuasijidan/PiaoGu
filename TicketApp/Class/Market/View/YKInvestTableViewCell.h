@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface YKInvestTableViewCell : UITableViewCell
+// 跳转产品详情页 传递model数据
+@property(nonatomic,copy)void (^detailBlock)(NSString *model);
+
 
 @end
