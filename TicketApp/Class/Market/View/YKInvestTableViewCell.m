@@ -71,15 +71,23 @@
     
     UIButton *detailButton = [[UIButton alloc] init];
     [detailButton setTitle:@"查看详情" forState:UIControlStateNormal];
+    detailButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    [detailButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIImage *image = [UIImage imageNamed:@"invest_detal_rightArrow"];
     [detailButton addTarget:self action:@selector(detailButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [detailButton setImage:image forState:UIControlStateNormal];
+    float labelWidth = 55;
+    [detailButton setImageEdgeInsets:UIEdgeInsetsMake(0, labelWidth, 0, -labelWidth)];
+    [detailButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -image.size.width, 0, image.size.width)];
     [detailButton sizeToFit];
+    
     [self.contentView addSubview:detailButton];
     [detailButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView).offset(-kSPACING);
+        make.right.equalTo(self.contentView).offset(-kSPACING*2);
         make.bottom.equalTo(imgView);
     }];
+   
+    
 }
 #pragma mark - 跳转详情页面
 - (void)detailButtonAction{
