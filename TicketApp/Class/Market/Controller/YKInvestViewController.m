@@ -38,6 +38,7 @@
     investTableView.rowHeight = 135;
     // 去掉表格分割线
 //    investTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self.view addSubview:investTableView];
     self.investTableView = investTableView;
     
@@ -93,6 +94,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YKInvestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKINVESTCELL forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.detailBlock = ^(NSString *model) {
         
         YKDetailViewController *detailVC = [[YKDetailViewController alloc] init];

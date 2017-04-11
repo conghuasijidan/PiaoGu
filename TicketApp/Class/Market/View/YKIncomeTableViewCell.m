@@ -1,22 +1,21 @@
 //
-//  YKInvestTableViewCell.m
+//  YKIncomeTableViewCell.m
 //  TicketApp
 //
-//  Created by 葱花思鸡蛋 on 2017/4/10.
+//  Created by 葱花思鸡蛋 on 2017/4/11.
 //  Copyright © 2017年 hangzhouzhulongkeji. All rights reserved.
 //
 
-#import "YKInvestTableViewCell.h"
+#import "YKIncomeTableViewCell.h"
 
-@interface YKInvestTableViewCell ()
+@interface YKIncomeTableViewCell ()
 @property(nonatomic,weak)UIImageView *imgView;
 @property(nonatomic,weak)UILabel *titleLabel;
-@property(nonatomic,weak)UILabel *descLabel;
-
+@property(nonatomic,weak)UILabel *descLable;
 
 @end
 
-@implementation YKInvestTableViewCell
+@implementation YKIncomeTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -63,7 +62,7 @@
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [textStr length])];
     descLabel.attributedText = attributedString;
     [self.contentView addSubview:descLabel];
-    self.descLabel = descLabel;
+    self.descLable = descLabel;
     [descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(titleLabel);
         make.top.equalTo(titleLabel.mas_bottom).offset(kSPACING*0.5);
@@ -88,7 +87,7 @@
         make.right.equalTo(self.contentView).offset(-kSPACING*2);
         make.bottom.equalTo(imgView);
     }];
-   
+    
     
 }
 #pragma mark - 跳转详情页面
@@ -98,8 +97,9 @@
         NSString *model = @"我是model";
         self.detailBlock(model);
     }
-
+    
 }
+
 
 
 @end
