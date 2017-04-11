@@ -10,7 +10,7 @@
 #import "YKInvestTableViewCell.h"
 #import "YKDetailViewController.h"
 #define kHEADERHEIGHT 70
-
+#define kROWHEIGHT 135
 @interface YKInvestViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak)UITableView *investTableView;
 
@@ -35,9 +35,9 @@
     investTableView.dataSource = self;
     investTableView.delegate = self;
     [investTableView registerClass:[YKInvestTableViewCell class] forCellReuseIdentifier:YKINVESTCELL];
-    investTableView.rowHeight = 135;
+    investTableView.rowHeight = kROWHEIGHT;
     // 去掉表格分割线
-//    investTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    investTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.view addSubview:investTableView];
     self.investTableView = investTableView;

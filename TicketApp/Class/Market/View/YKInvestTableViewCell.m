@@ -82,13 +82,19 @@
     [detailButton setImageEdgeInsets:UIEdgeInsetsMake(0, labelWidth, 0, -labelWidth)];
     [detailButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -image.size.width, 0, image.size.width)];
     [detailButton sizeToFit];
-    
     [self.contentView addSubview:detailButton];
     [detailButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView).offset(-kSPACING*2);
         make.bottom.equalTo(imgView);
     }];
-   
+    
+    UIView *lineView = [[UIView alloc] init];
+    lineView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
+    [self.contentView addSubview:lineView];
+    [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView);
+        make.height.mas_equalTo(1);
+    }];
     
 }
 #pragma mark - 跳转详情页面

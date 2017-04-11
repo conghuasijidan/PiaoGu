@@ -10,6 +10,7 @@
 #import "YKIncomeTableViewCell.h"
 #import "YKDetailViewController.h"
 #define kHEADERHEIGHT 70
+#define kROWHEIGHT 135
 
 @interface YKIncomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak)UITableView *incomeTableView;
@@ -35,7 +36,7 @@
     [incomeTableView registerClass:[YKIncomeTableViewCell class] forCellReuseIdentifier:YKINCOMECELL];
     incomeTableView.rowHeight = 135;
     // 去掉表格分割线
-    //    investTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    incomeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:incomeTableView];
     self.incomeTableView = incomeTableView;
     
