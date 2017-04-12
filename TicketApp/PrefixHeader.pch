@@ -16,7 +16,9 @@
 #define YKMARKETCELL @"YKMarketTableViewCell"
 #define YKINVESTCELL @"YKInvestTableViewCell"
 #define YKINCOMECELL @"YKIncomeTableViewCell"
-#define YKHOMEMECELL  @"YKHomeMeTableViewCell"
+#define YKHOMEMECELL @"YKHomeMeTableViewCell"
+#define YKINFORCELL  @"YKInforTableViewCell"
+
 
 #define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 #define kSPACING 10

@@ -35,6 +35,7 @@
 		F4423B021E9DCC6F004E3E4A /* YKHomeKefuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AF61E9DCC6F004E3E4A /* YKHomeKefuViewController.m */; };
 		F4423B031E9DCC6F004E3E4A /* YKHomeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AFC1E9DCC6F004E3E4A /* YKHomeSettingViewController.m */; };
 		F4423B041E9DCC6F004E3E4A /* YKHomeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B001E9DCC6F004E3E4A /* YKHomeMeViewController.m */; };
+		F4423B071E9DCF74004E3E4A /* YKInforTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B061E9DCF74004E3E4A /* YKInforTableViewCell.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -101,6 +102,8 @@
 		F4423AFC1E9DCC6F004E3E4A /* YKHomeSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeSettingViewController.m; sourceTree = "<group>"; };
 		F4423AFF1E9DCC6F004E3E4A /* YKHomeMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeMeViewController.h; sourceTree = "<group>"; };
 		F4423B001E9DCC6F004E3E4A /* YKHomeMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeMeViewController.m; sourceTree = "<group>"; };
+		F4423B051E9DCF74004E3E4A /* YKInforTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKInforTableViewCell.h; sourceTree = "<group>"; };
+		F4423B061E9DCF74004E3E4A /* YKInforTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKInforTableViewCell.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -447,6 +450,8 @@
 		F4423AF21E9DCC6F004E3E4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4423B051E9DCF74004E3E4A /* YKInforTableViewCell.h */,
+				F4423B061E9DCF74004E3E4A /* YKInforTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,6 +692,7 @@
 			files = (
 				F4423B011E9DCC6F004E3E4A /* YKHomeInformationViewController.m in Sources */,
 				F4423A251E977E78004E3E4A /* YKNetWorkManager.m in Sources */,
+				F4423B071E9DCF74004E3E4A /* YKInforTableViewCell.m in Sources */,
 				F4423B031E9DCC6F004E3E4A /* YKHomeSettingViewController.m in Sources */,
 				F4423A3A1E97816D004E3E4A /* TADotView.m in Sources */,
 				F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */,
