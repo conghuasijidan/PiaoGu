@@ -1,14 +1,14 @@
 //
-//  YKMeTwoTableViewCell.m
+//  YKHomeMeTableViewCell.m
 //  TicketApp
 //
-//  Created by 葱花思鸡蛋 on 2017/4/11.
+//  Created by 葱花思鸡蛋 on 2017/4/12.
 //  Copyright © 2017年 hangzhouzhulongkeji. All rights reserved.
 //
 
-#import "YKMeTwoTableViewCell.h"
+#import "YKHomeMeTableViewCell.h"
 
-@implementation YKMeTwoTableViewCell
+@implementation YKHomeMeTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -17,8 +17,10 @@
     }
     return self;
 }
+
 #pragma mark - 搭建界面
 - (void)setupUI{
+    
     UIImageView *imgView = [[UIImageView alloc] init];
     imgView.image = [UIImage imageNamed:@"me_kefu"];
     [self.contentView addSubview:imgView];
@@ -31,8 +33,8 @@
     
     UILabel *descLabel = [[UILabel alloc] init];
     descLabel.text = @"个人信息";
-    descLabel.font = [UIFont systemFontOfSize:12];
-    descLabel.textColor = [UIColor blackColor];
+    descLabel.font = [UIFont systemFontOfSize:14];
+    descLabel.textColor = [UIColor yk_colorWithHex:0x333333];
     [self.contentView addSubview:descLabel];
     self.descLabel = descLabel;
     [descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -42,7 +44,7 @@
     }];
     
     UIImageView *arrowImageView = [[UIImageView alloc] init];
-    arrowImageView.image = [UIImage imageNamed:@"invest_detal_rightArrow"];
+    arrowImageView.image = [UIImage imageNamed:@"me_rightArrow"];
     [self.contentView addSubview:arrowImageView];
     [arrowImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView).offset(-10);
@@ -56,7 +58,7 @@
         make.left.right.bottom.equalTo(self.contentView);
         make.height.mas_equalTo(1);
     }];
-
+    
 }
 
 @end
