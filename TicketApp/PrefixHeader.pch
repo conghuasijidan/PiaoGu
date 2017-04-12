@@ -12,13 +12,13 @@
 //通知宏
 #define YKNotificationLogin @"YKNotificationLogin"
 
-//普通宏定义
+//cellID宏定义
 #define YKMARKETCELL @"YKMarketTableViewCell"
 #define YKINVESTCELL @"YKInvestTableViewCell"
 #define YKINCOMECELL @"YKIncomeTableViewCell"
 #define YKHOMEMECELL @"YKHomeMeTableViewCell"
 #define YKINFORCELL  @"YKInforTableViewCell"
-
+#define YKMASKCELL   @"YKMaskTableViewCell"
 
 #define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 #define kSPACING 10

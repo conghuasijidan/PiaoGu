@@ -36,6 +36,10 @@
 		F4423B031E9DCC6F004E3E4A /* YKHomeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423AFC1E9DCC6F004E3E4A /* YKHomeSettingViewController.m */; };
 		F4423B041E9DCC6F004E3E4A /* YKHomeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B001E9DCC6F004E3E4A /* YKHomeMeViewController.m */; };
 		F4423B071E9DCF74004E3E4A /* YKInforTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B061E9DCF74004E3E4A /* YKInforTableViewCell.m */; };
+		F4423B0A1E9DFF9F004E3E4A /* YKSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B091E9DFF9F004E3E4A /* YKSettingTableViewCell.m */; };
+		F4423B101E9E07FA004E3E4A /* YKMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B0F1E9E07FA004E3E4A /* YKMaskViewController.m */; };
+		F4423B131E9E0FF0004E3E4A /* YKMaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B121E9E0FF0004E3E4A /* YKMaskTableViewCell.m */; };
+		F4423B161E9E2386004E3E4A /* YKAbutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B151E9E2386004E3E4A /* YKAbutViewController.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -104,6 +108,14 @@
 		F4423B001E9DCC6F004E3E4A /* YKHomeMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeMeViewController.m; sourceTree = "<group>"; };
 		F4423B051E9DCF74004E3E4A /* YKInforTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKInforTableViewCell.h; sourceTree = "<group>"; };
 		F4423B061E9DCF74004E3E4A /* YKInforTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKInforTableViewCell.m; sourceTree = "<group>"; };
+		F4423B081E9DFF9F004E3E4A /* YKSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSettingTableViewCell.h; sourceTree = "<group>"; };
+		F4423B091E9DFF9F004E3E4A /* YKSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSettingTableViewCell.m; sourceTree = "<group>"; };
+		F4423B0E1E9E07FA004E3E4A /* YKMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMaskViewController.h; sourceTree = "<group>"; };
+		F4423B0F1E9E07FA004E3E4A /* YKMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMaskViewController.m; sourceTree = "<group>"; };
+		F4423B111E9E0FF0004E3E4A /* YKMaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMaskTableViewCell.h; sourceTree = "<group>"; };
+		F4423B121E9E0FF0004E3E4A /* YKMaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMaskTableViewCell.m; sourceTree = "<group>"; };
+		F4423B141E9E2386004E3E4A /* YKAbutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAbutViewController.h; sourceTree = "<group>"; };
+		F4423B151E9E2386004E3E4A /* YKAbutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAbutViewController.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -504,6 +516,10 @@
 			children = (
 				F4423AFB1E9DCC6F004E3E4A /* YKHomeSettingViewController.h */,
 				F4423AFC1E9DCC6F004E3E4A /* YKHomeSettingViewController.m */,
+				F4423B0E1E9E07FA004E3E4A /* YKMaskViewController.h */,
+				F4423B0F1E9E07FA004E3E4A /* YKMaskViewController.m */,
+				F4423B141E9E2386004E3E4A /* YKAbutViewController.h */,
+				F4423B151E9E2386004E3E4A /* YKAbutViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,6 +534,10 @@
 		F4423AFE1E9DCC6F004E3E4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4423B081E9DFF9F004E3E4A /* YKSettingTableViewCell.h */,
+				F4423B091E9DFF9F004E3E4A /* YKSettingTableViewCell.m */,
+				F4423B111E9E0FF0004E3E4A /* YKMaskTableViewCell.h */,
+				F4423B121E9E0FF0004E3E4A /* YKMaskTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -702,6 +722,7 @@
 				F4423A381E97816D004E3E4A /* TAAbstractDotView.m in Sources */,
 				F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */,
 				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
+				F4423B0A1E9DFF9F004E3E4A /* YKSettingTableViewCell.m in Sources */,
 				F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */,
 				F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */,
 				F4423A3B1E97816D004E3E4A /* TAPageControl.m in Sources */,
@@ -712,9 +733,12 @@
 				F4423AB71E9B709C004E3E4A /* YKInvestTableViewCell.m in Sources */,
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
 				F4423B021E9DCC6F004E3E4A /* YKHomeKefuViewController.m in Sources */,
+				F4423B131E9E0FF0004E3E4A /* YKMaskTableViewCell.m in Sources */,
+				F4423B101E9E07FA004E3E4A /* YKMaskViewController.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
 				F4423AB11E9B5FE4004E3E4A /* YKInvestViewController.m in Sources */,
+				F4423B161E9E2386004E3E4A /* YKAbutViewController.m in Sources */,
 				F4BBFA961E9642D800043CEA /* main.m in Sources */,
 				F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */,
 				F4423AB41E9B5FF4004E3E4A /* YKIncomeViewController.m in Sources */,
