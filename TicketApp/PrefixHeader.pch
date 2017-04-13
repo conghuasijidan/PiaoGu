@@ -21,6 +21,8 @@
 #define YKMASKCELL   @"YKMaskTableViewCell"
 #define YKSETTINGCELL @"YKSettingTableViewCell"
 #define YKABOUTCELL  @"YKAbutViewControllerCell"
+#define YKBALANCECELL @"YKBalanceTableViewCell"
+
 #define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 #define kSPACING 10
 
