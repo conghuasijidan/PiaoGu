@@ -45,12 +45,6 @@
     [self setupHeaderView];
     
 }
-#pragma mark - 退出登录
-- (void)exitButtonAction{
-    YKLog(@"退出登录");
-    
-    
-}
 #pragma mark - 搭建头部视图
 - (void)setupHeaderView{
 
@@ -118,6 +112,7 @@
     [self.exitButton removeFromSuperview];
     
 }
+#pragma mark - 添加退出按钮
 - (void)viewWillAppear:(BOOL)animated
 {
 
@@ -137,6 +132,12 @@
         make.height.mas_equalTo(49);
     }];
 
+}
+
+- (void)exitButtonAction{
+    YKLog(@"退出登录");
+    
+    
 }
 
 #pragma mark - 实现数据源方法

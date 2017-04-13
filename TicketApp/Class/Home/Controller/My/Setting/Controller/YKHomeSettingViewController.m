@@ -9,7 +9,8 @@
 #import "YKHomeSettingViewController.h"
 #import "YKSettingTableViewCell.h"
 #import "YKMaskViewController.h"
-static NSString * cellID = @"CELLID";
+#import "YKAbutViewController.h"
+
 
 @interface YKHomeSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,18 +27,18 @@ static NSString * cellID = @"CELLID";
 
 #pragma mark - 搭建界面
 - (void)setupUI{
-    UITableView *inforTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    inforTableView.backgroundColor = [UIColor whiteColor];
-    inforTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    inforTableView.dataSource = self;
-    inforTableView.delegate = self;
-    [inforTableView registerClass:[YKSettingTableViewCell class] forCellReuseIdentifier:cellID];
-    inforTableView.rowHeight = 50;
-    [self.view addSubview:inforTableView];
+    UITableView *settingTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    settingTableView.backgroundColor = [UIColor whiteColor];
+    settingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    settingTableView.dataSource = self;
+    settingTableView.delegate = self;
+    [settingTableView registerClass:[YKSettingTableViewCell class] forCellReuseIdentifier:YKSETTINGCELL];
+    settingTableView.rowHeight = 50;
+    [self.view addSubview:settingTableView];
     UIView *bgView = [[UIView alloc] init];
     bgView.backgroundColor = [UIColor whiteColor];
-    inforTableView.tableFooterView = bgView;
-    inforTableView.contentInset = UIEdgeInsetsMake(kSPACING, 0, 0, 0);
+    settingTableView.tableFooterView = bgView;
+    settingTableView.contentInset = UIEdgeInsetsMake(kSPACING, 0, 0, 0);
     
     UIView *lineView = [[UIView alloc] init];
     lineView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
@@ -58,7 +59,7 @@ static NSString * cellID = @"CELLID";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    YKSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    YKSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKSETTINGCELL forIndexPath:indexPath];
     if (indexPath.row == 0) {
         cell.titleLab.text = @"消息设置";
         
@@ -93,7 +94,9 @@ static NSString * cellID = @"CELLID";
         
     }else if (indexPath.row == 3){
         
+        YKAbutViewController *aboutVC = [[YKAbutViewController alloc] init];
         
+        [self.navigationController pushViewController:aboutVC animated:YES];
     }
     
 }

@@ -43,7 +43,7 @@
     maskTableView.tableFooterView = fooderView;
     UILabel *textLabel = [[UILabel alloc] init];
     textLabel.text = @"WIFI下自动5秒刷新";
-    textLabel.textColor = [UIColor yk_colorWithHex:0x999999];
+    textLabel.textColor = [UIColor yk_colorWithHex:0x666666];
     textLabel.font = [UIFont systemFontOfSize:12];
     [fooderView addSubview:textLabel];
     [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {

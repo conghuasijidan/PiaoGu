@@ -8,3 +8,4 @@
 
 #import "UIColor+Addtion.h"
 #import "UIScreen+YKScreenTools.h"
+#import "UILabel+Addition.h"

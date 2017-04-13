@@ -40,6 +40,8 @@
 		F4423B101E9E07FA004E3E4A /* YKMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B0F1E9E07FA004E3E4A /* YKMaskViewController.m */; };
 		F4423B131E9E0FF0004E3E4A /* YKMaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B121E9E0FF0004E3E4A /* YKMaskTableViewCell.m */; };
 		F4423B161E9E2386004E3E4A /* YKAbutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B151E9E2386004E3E4A /* YKAbutViewController.m */; };
+		F4423B1B1E9E29A9004E3E4A /* YKAboutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B1A1E9E29A9004E3E4A /* YKAboutTableViewCell.m */; };
+		F4423B1E1E9F16F5004E3E4A /* UILabel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B1D1E9F16F5004E3E4A /* UILabel+Addition.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -116,6 +118,10 @@
 		F4423B121E9E0FF0004E3E4A /* YKMaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMaskTableViewCell.m; sourceTree = "<group>"; };
 		F4423B141E9E2386004E3E4A /* YKAbutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAbutViewController.h; sourceTree = "<group>"; };
 		F4423B151E9E2386004E3E4A /* YKAbutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAbutViewController.m; sourceTree = "<group>"; };
+		F4423B191E9E29A9004E3E4A /* YKAboutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAboutTableViewCell.h; sourceTree = "<group>"; };
+		F4423B1A1E9E29A9004E3E4A /* YKAboutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAboutTableViewCell.m; sourceTree = "<group>"; };
+		F4423B1C1E9F16F5004E3E4A /* UILabel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Addition.h"; sourceTree = "<group>"; };
+		F4423B1D1E9F16F5004E3E4A /* UILabel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Addition.m"; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +179,8 @@
 				F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */,
 				F4423AA61E9B21C3004E3E4A /* UIScreen+YKScreenTools.h */,
 				F4423AA71E9B21C3004E3E4A /* UIScreen+YKScreenTools.m */,
+				F4423B1C1E9F16F5004E3E4A /* UILabel+Addition.h */,
+				F4423B1D1E9F16F5004E3E4A /* UILabel+Addition.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -516,10 +524,8 @@
 			children = (
 				F4423AFB1E9DCC6F004E3E4A /* YKHomeSettingViewController.h */,
 				F4423AFC1E9DCC6F004E3E4A /* YKHomeSettingViewController.m */,
-				F4423B0E1E9E07FA004E3E4A /* YKMaskViewController.h */,
-				F4423B0F1E9E07FA004E3E4A /* YKMaskViewController.m */,
-				F4423B141E9E2386004E3E4A /* YKAbutViewController.h */,
-				F4423B151E9E2386004E3E4A /* YKAbutViewController.m */,
+				F4423B181E9E25A7004E3E4A /* 刷新频率 */,
+				F4423B171E9E2593004E3E4A /* 关于 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -538,8 +544,28 @@
 				F4423B091E9DFF9F004E3E4A /* YKSettingTableViewCell.m */,
 				F4423B111E9E0FF0004E3E4A /* YKMaskTableViewCell.h */,
 				F4423B121E9E0FF0004E3E4A /* YKMaskTableViewCell.m */,
+				F4423B191E9E29A9004E3E4A /* YKAboutTableViewCell.h */,
+				F4423B1A1E9E29A9004E3E4A /* YKAboutTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4423B171E9E2593004E3E4A /* 关于 */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B141E9E2386004E3E4A /* YKAbutViewController.h */,
+				F4423B151E9E2386004E3E4A /* YKAbutViewController.m */,
+			);
+			name = "关于";
+			sourceTree = "<group>";
+		};
+		F4423B181E9E25A7004E3E4A /* 刷新频率 */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B0E1E9E07FA004E3E4A /* YKMaskViewController.h */,
+				F4423B0F1E9E07FA004E3E4A /* YKMaskViewController.m */,
+			);
+			name = "刷新频率";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -732,9 +758,11 @@
 				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,
 				F4423AB71E9B709C004E3E4A /* YKInvestTableViewCell.m in Sources */,
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
+				F4423B1B1E9E29A9004E3E4A /* YKAboutTableViewCell.m in Sources */,
 				F4423B021E9DCC6F004E3E4A /* YKHomeKefuViewController.m in Sources */,
 				F4423B131E9E0FF0004E3E4A /* YKMaskTableViewCell.m in Sources */,
 				F4423B101E9E07FA004E3E4A /* YKMaskViewController.m in Sources */,
+				F4423B1E1E9F16F5004E3E4A /* UILabel+Addition.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
 				F4423AB11E9B5FE4004E3E4A /* YKInvestViewController.m in Sources */,
