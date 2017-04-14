@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface YKBalanceTableViewCell : UITableViewCell
+@property(nonatomic,weak)UILabel *descLabel;
+@property(nonatomic,weak)UIImageView *iconImageView;
+
+
 
 @end

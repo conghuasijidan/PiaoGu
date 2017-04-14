@@ -8,7 +8,8 @@
 
 #import "YKBalanceViewController.h"
 #import "YKBalanceTableViewCell.h"
-
+#import "YKCashViewController.h"
+#import "YKTopupViewController.h"
 #define HEADERHEIGHT 119
 
 @interface YKBalanceViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -108,14 +109,37 @@
 #pragma mark - 数据源 代理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     YKBalanceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKBALANCECELL forIndexPath:indexPath ];
+    if (indexPath.row == 0) {
+        cell.iconImageView.image = [UIImage imageNamed:@"home_balance_topup_icon"];
+        cell.descLabel.text = @"充值";
+    }else if (indexPath.row == 1){
+        cell.iconImageView.image = [UIImage imageNamed:@"home_balance_cash_icon"];
+        cell.descLabel.text = @"提现";
+
+    }
+    
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+        YKTopupViewController *topupVC = [[YKTopupViewController alloc] init];
+        [self.navigationController pushViewController:topupVC animated:YES];
+    }else if (indexPath.row == 1){
+        YKCashViewController *cashVC = [[YKCashViewController alloc] init];
+        [self.navigationController pushViewController:cashVC animated:YES];
+    }
+    
 }
 
 @end

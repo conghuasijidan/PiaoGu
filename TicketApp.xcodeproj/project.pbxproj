@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5FAEA6B536417DB6ECC340A5 /* Pods_TicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */; };
+		F418B8941E9F4ACD0069FB8B /* YKTopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418B8931E9F4ACD0069FB8B /* YKTopupViewController.m */; };
+		F418B8971E9F4AE10069FB8B /* YKCashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418B8961E9F4AE10069FB8B /* YKCashViewController.m */; };
 		F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F41E971DE4004E3E4A /* TabBarViewController.m */; };
 		F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F61E971DE4004E3E4A /* YKNavController.m */; };
 		F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239FB1E9720DD004E3E4A /* UIColor+Addtion.m */; };
@@ -54,6 +56,10 @@
 		2FD23CB1DE8FC5037980DE87 /* Pods-TicketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp.release.xcconfig"; sourceTree = "<group>"; };
 		D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F418B8921E9F4ACD0069FB8B /* YKTopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTopupViewController.h; sourceTree = "<group>"; };
+		F418B8931E9F4ACD0069FB8B /* YKTopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTopupViewController.m; sourceTree = "<group>"; };
+		F418B8951E9F4AE10069FB8B /* YKCashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCashViewController.h; sourceTree = "<group>"; };
+		F418B8961E9F4AE10069FB8B /* YKCashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCashViewController.m; sourceTree = "<group>"; };
 		F44239F31E971DE4004E3E4A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		F44239F41E971DE4004E3E4A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		F44239F51E971DE4004E3E4A /* YKNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNavController.h; sourceTree = "<group>"; };
@@ -164,6 +170,24 @@
 				5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F418B8981E9F55FC0069FB8B /* 充值 */ = {
+			isa = PBXGroup;
+			children = (
+				F418B8921E9F4ACD0069FB8B /* YKTopupViewController.h */,
+				F418B8931E9F4ACD0069FB8B /* YKTopupViewController.m */,
+			);
+			name = "充值";
+			sourceTree = "<group>";
+		};
+		F418B8991E9F562A0069FB8B /* 提现 */ = {
+			isa = PBXGroup;
+			children = (
+				F418B8951E9F4AE10069FB8B /* YKCashViewController.h */,
+				F418B8961E9F4AE10069FB8B /* YKCashViewController.m */,
+			);
+			name = "提现";
 			sourceTree = "<group>";
 		};
 		F44239F21E971DE4004E3E4A /* Main */ = {
@@ -459,6 +483,8 @@
 			children = (
 				F4423B241E9F2E00004E3E4A /* YKBalanceViewController.h */,
 				F4423B251E9F2E00004E3E4A /* YKBalanceViewController.m */,
+				F418B8981E9F55FC0069FB8B /* 充值 */,
+				F418B8991E9F562A0069FB8B /* 提现 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -811,7 +837,9 @@
 				F4423B281E9F2E00004E3E4A /* YKBalanceViewController.m in Sources */,
 				F4423B521E9F2ECC004E3E4A /* YKAboutTableViewCell.m in Sources */,
 				F4423B4F1E9F2ECC004E3E4A /* YKAbutViewController.m in Sources */,
+				F418B8941E9F4ACD0069FB8B /* YKTopupViewController.m in Sources */,
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
+				F418B8971E9F4AE10069FB8B /* YKCashViewController.m in Sources */,
 				F4423B1E1E9F16F5004E3E4A /* UILabel+Addition.m in Sources */,
 				F4423B511E9F2ECC004E3E4A /* YKMaskViewController.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
