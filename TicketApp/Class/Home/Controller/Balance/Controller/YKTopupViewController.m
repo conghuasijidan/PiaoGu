@@ -11,6 +11,7 @@
 @interface YKTopupViewController ()<UITextFieldDelegate>
 @property(nonatomic,weak)UITextField *cashTextField;
 @property(nonatomic,weak)UIButton *selectedButton;
+@property(nonatomic,weak)UIButton *nextButton;
 
 
 @end
@@ -29,10 +30,11 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:tableView];
-    CGFloat height = self.view.bounds.size.height - 52;
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth],height)];
+    CGFloat height = self.view.bounds.size.height - 64;
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth], height)];
     headerView.backgroundColor = [UIColor whiteColor];
     tableView.tableHeaderView = headerView;
+    tableView.tableFooterView = [[UIView alloc] init];
     
     UIImageView *bgImageView= [[UIImageView alloc] init];
     bgImageView.image = [UIImage imageNamed:@"home_balance_topup_bg"];
@@ -81,6 +83,7 @@
     }];
     UIView *leftline = [[UIView alloc] init];
     leftline.backgroundColor = [UIColor yk_colorWithHex:0x979797];
+    leftline.alpha = 0.3;
     [headerView addSubview:leftline];
     [leftline mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(typeLabel.mas_left).offset(-kSPACING*0.5);
@@ -90,6 +93,7 @@
     }];
     UIView *rightline = [[UIView alloc] init];
     rightline.backgroundColor = [UIColor yk_colorWithHex:0x979797];
+    rightline.alpha = 0.3;
     [headerView addSubview:rightline];
     [rightline mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(typeLabel.mas_right).offset(kSPACING*0.5);
@@ -114,12 +118,12 @@
         make.right.equalTo(headerView.mas_centerX).offset(-kSPACING*2);
         make.top.equalTo(typeLabel.mas_bottom).offset(kSPACING*2);
         //测出大小
-        make.size.mas_equalTo(CGSizeMake(158, 158));
+        make.size.mas_equalTo(CGSizeMake(75, 75));
     }];
     [alipayBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(headerView.mas_centerX).offset(kSPACING*2);
         make.top.equalTo(typeLabel.mas_bottom).offset(kSPACING*2);
-        make.size.mas_equalTo(CGSizeMake(158, 158));
+        make.size.mas_equalTo(CGSizeMake(75, 75));
     }];
     
     
@@ -139,6 +143,25 @@
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchesBeganAction)];
     [headerView addGestureRecognizer:tapRecognizer];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // 可以尝试给个动画效果
+    UIButton *nextBtn = [[UIButton alloc] init];
+    [nextBtn setImage:[UIImage imageNamed:@"balance_topup_next"] forState:UIControlStateNormal];
+    [nextBtn addTarget:self action:@selector(nextBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    UIWindow *window = [UIApplication sharedApplication].windows.lastObject;
+    [window addSubview:nextBtn];
+    self.nextButton = nextBtn;
+    [nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(window);
+        make.bottom.equalTo(window);
+    }];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.nextButton removeFromSuperview];
 }
 #pragma mark - textfield 的代理方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -176,6 +199,10 @@
     [self.cashTextField resignFirstResponder];
 }
 
+- (void)nextBtnAction{
+        YKLog(@"hello kity");
+
+}
 
 
 @end
