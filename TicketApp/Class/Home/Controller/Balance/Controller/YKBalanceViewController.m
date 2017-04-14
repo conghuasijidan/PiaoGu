@@ -10,6 +10,8 @@
 #import "YKBalanceTableViewCell.h"
 #import "YKCashViewController.h"
 #import "YKTopupViewController.h"
+#import "YKShowDedailViewController.h"
+
 #define HEADERHEIGHT 119
 
 @interface YKBalanceViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -41,7 +43,9 @@
 }
 
 - (void)rightItemAction{
-    YKLog(@"明细界面");
+    YKShowDedailViewController *vc = [[YKShowDedailViewController alloc] init];
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 搭建界面

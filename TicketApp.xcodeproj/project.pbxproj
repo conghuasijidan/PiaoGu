@@ -46,6 +46,8 @@
 		F4423B551E9F2ECC004E3E4A /* YKHomeMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B491E9F2ECC004E3E4A /* YKHomeMeViewController.m */; };
 		F4423B581E9F3E8E004E3E4A /* YKHomeMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B571E9F3E8E004E3E4A /* YKHomeMeTableViewCell.m */; };
 		F4423B5B1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4423B5A1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m */; };
+		F49815181EA0B45B00461AAB /* YKShowDedailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815171EA0B45B00461AAB /* YKShowDedailViewController.m */; };
+		F498151C1EA0B78F00461AAB /* YKShowDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F498151B1EA0B78F00461AAB /* YKShowDetailTableViewCell.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -134,6 +136,10 @@
 		F4423B571E9F3E8E004E3E4A /* YKHomeMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeMeTableViewCell.m; sourceTree = "<group>"; };
 		F4423B591E9F3F8F004E3E4A /* YKBalanceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKBalanceTableViewCell.h; sourceTree = "<group>"; };
 		F4423B5A1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKBalanceTableViewCell.m; sourceTree = "<group>"; };
+		F49815161EA0B45B00461AAB /* YKShowDedailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKShowDedailViewController.h; sourceTree = "<group>"; };
+		F49815171EA0B45B00461AAB /* YKShowDedailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKShowDedailViewController.m; sourceTree = "<group>"; };
+		F498151A1EA0B78F00461AAB /* YKShowDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKShowDetailTableViewCell.h; sourceTree = "<group>"; };
+		F498151B1EA0B78F00461AAB /* YKShowDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKShowDetailTableViewCell.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -483,6 +489,7 @@
 			children = (
 				F4423B241E9F2E00004E3E4A /* YKBalanceViewController.h */,
 				F4423B251E9F2E00004E3E4A /* YKBalanceViewController.m */,
+				F49815191EA0B46400461AAB /* 明细 */,
 				F418B8981E9F55FC0069FB8B /* 充值 */,
 				F418B8991E9F562A0069FB8B /* 提现 */,
 			);
@@ -501,6 +508,8 @@
 			children = (
 				F4423B591E9F3F8F004E3E4A /* YKBalanceTableViewCell.h */,
 				F4423B5A1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m */,
+				F498151A1EA0B78F00461AAB /* YKShowDetailTableViewCell.h */,
+				F498151B1EA0B78F00461AAB /* YKShowDetailTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +651,15 @@
 				F4423B571E9F3E8E004E3E4A /* YKHomeMeTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F49815191EA0B46400461AAB /* 明细 */ = {
+			isa = PBXGroup;
+			children = (
+				F49815161EA0B45B00461AAB /* YKShowDedailViewController.h */,
+				F49815171EA0B45B00461AAB /* YKShowDedailViewController.m */,
+			);
+			name = "明细";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -823,6 +841,7 @@
 				F4423B4C1E9F2ECC004E3E4A /* YKHomeInformationViewController.m in Sources */,
 				F4423A381E97816D004E3E4A /* TAAbstractDotView.m in Sources */,
 				F4423A211E9774A0004E3E4A /* YKLoginViewController.m in Sources */,
+				F49815181EA0B45B00461AAB /* YKShowDedailViewController.m in Sources */,
 				F4423B551E9F2ECC004E3E4A /* YKHomeMeViewController.m in Sources */,
 				F4423B581E9F3E8E004E3E4A /* YKHomeMeTableViewCell.m in Sources */,
 				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
@@ -850,6 +869,7 @@
 				F4423A121E972AB8004E3E4A /* YKMarketViewController.m in Sources */,
 				F4423B541E9F2ECC004E3E4A /* YKSettingTableViewCell.m in Sources */,
 				F4423AB41E9B5FF4004E3E4A /* YKIncomeViewController.m in Sources */,
+				F498151C1EA0B78F00461AAB /* YKShowDetailTableViewCell.m in Sources */,
 				F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */,
 				F4423A3D1E97816D004E3E4A /* SDCycleScrollView.m in Sources */,
 			);

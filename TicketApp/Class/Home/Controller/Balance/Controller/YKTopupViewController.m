@@ -186,12 +186,14 @@
     self.selectedButton.selected = NO;
     self.selectedButton = button;
     self.selectedButton.selected = YES;
+    self.selectedButton.tag = 10;
 }
 - (void)alipayBtnAction:(UIButton *)button{
     [self.cashTextField resignFirstResponder];
     self.selectedButton.selected = NO;
     self.selectedButton = button;
     self.selectedButton.selected = YES;
+    self.selectedButton.tag = 20;
 }
 // 手势
 - (void)touchesBeganAction
@@ -200,7 +202,12 @@
 }
 
 - (void)nextBtnAction{
-        YKLog(@"hello kity");
+    if (self.selectedButton.tag == 10) {
+        YKLog(@"使用微信方式提现");
+    }else if (self.selectedButton.tag == 20){
+        YKLog(@"使用支付宝方式提现 ");
+    }
+    
 
 }
 

@@ -217,6 +217,16 @@
 - (void)textfieldEditChangeAction{
     
     YKLog(@"textField 变化");
+    if (self.cashTextField.text.length > 0) {
+        float cost = [self.cashTextField.text floatValue]*0.001;
+        self.costLabel.text = [NSString stringWithFormat:@"扣除手续费%.2f元",cost];
+        [self.getMoneyButton setHidden:YES];
+    }else
+    {
+        self.costLabel.text = [NSString stringWithFormat:@"可用余额%.2f元",2384.88];
+        [self.getMoneyButton setHidden:NO];
+    }
+    
     if (self.cashTextField.text.length > 6) {
         self.cashTextField.text = [self.cashTextField.text substringToIndex:6];
     }
@@ -230,12 +240,14 @@
     self.selectedButton.selected = NO;
     self.selectedButton = button;
     self.selectedButton.selected = YES;
+    self.selectedButton.tag = 10;
 }
 - (void)alipayBtnAction:(UIButton *)button{
     [self.cashTextField resignFirstResponder];
     self.selectedButton.selected = NO;
     self.selectedButton = button;
     self.selectedButton.selected = YES;
+    self.selectedButton.tag = 20;
 }
 // 手势
 - (void)touchesBeganAction
@@ -244,7 +256,11 @@
 }
 // 提现按钮事件
 - (void)nextBtnAction{
-    YKLog(@"hello kity");
+    if (self.selectedButton.tag == 10) {
+        YKLog(@"使用微信方式提现")
+    }else if (self.selectedButton.tag == 20){
+        YKLog(@"使用支付宝方式提现");
+    }
     
 }
 // 余额全部体现按钮
