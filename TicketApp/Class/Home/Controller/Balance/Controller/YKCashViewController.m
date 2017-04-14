@@ -12,6 +12,8 @@
 @property(nonatomic,weak)UITextField *cashTextField;
 @property(nonatomic,weak)UIButton *nextButton;
 @property(nonatomic,weak)UIButton *selectedButton;
+@property(nonatomic,weak)UILabel *costLabel;
+@property(nonatomic,weak)UIButton *getMoneyButton;
 
 
 @end
@@ -81,15 +83,38 @@
         make.right.equalTo(headerView).offset(-kSPACING);
     }];
     
-    UIView *lineView = [[UIView alloc] init];
-    lineView.backgroundColor = [UIColor yk_colorWithHex:0x999999];
-    lineView.alpha = 0.2;
-    [headerView addSubview:lineView];
-    [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIView *separatelineView = [[UIView alloc] init];
+    separatelineView.backgroundColor = [UIColor yk_colorWithHex:0x999999];
+    separatelineView.alpha = 0.2;
+    [headerView addSubview:separatelineView];
+    [separatelineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(bgImageView).offset(2);
         make.right.equalTo(bgImageView).offset(-5);
         make.top.equalTo(servMoneyLabel.mas_bottom).offset(36);
         make.height.mas_equalTo(1);
+    }];
+//  收取的手续费
+    //model 里面的余额
+    NSString *numStr = [NSString stringWithFormat:@"可用余额%.2f元",2384.88];
+    UILabel *costLabel = [UILabel yk_labelWithText:numStr fontSize:12 textColor:[UIColor yk_colorWithHex:0x999999]];
+    [headerView addSubview:costLabel];
+    self.costLabel = costLabel;
+    [costLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgImageView).offset(kSPACING);
+        make.top.equalTo(separatelineView.mas_bottom).offset(kSPACING*2);
+    }];
+    // 全部体现按钮
+    UIButton *getMoneyBtn = [[UIButton alloc] init];
+    [getMoneyBtn setTitle:@"全部提现" forState:UIControlStateNormal];
+    [getMoneyBtn setTitleColor:[UIColor yk_colorWithHex:0xf75e6f] forState:UIControlStateNormal];
+    [getMoneyBtn addTarget:self action:@selector(getAllMoneyAction) forControlEvents:UIControlEventTouchUpInside];
+    getMoneyBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    [getMoneyBtn setHidden:NO];
+    [headerView addSubview:getMoneyBtn];
+    self.getMoneyButton = getMoneyBtn;
+    [getMoneyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(bgImageView).offset(-kSPACING);
+        make.centerY.equalTo(costLabel);
     }];
     
     
@@ -191,6 +216,7 @@
 
 - (void)textfieldEditChangeAction{
     
+    YKLog(@"textField 变化");
     if (self.cashTextField.text.length > 6) {
         self.cashTextField.text = [self.cashTextField.text substringToIndex:6];
     }
@@ -216,10 +242,16 @@
 {
     [self.cashTextField resignFirstResponder];
 }
-
+// 提现按钮事件
 - (void)nextBtnAction{
     YKLog(@"hello kity");
     
+}
+// 余额全部体现按钮
+- (void)getAllMoneyAction{
+    YKLog(@"余额全部提现");
+    // 把余额赋值给文本框
+    self.cashTextField.text = @"2384.88";
 }
 
 @end

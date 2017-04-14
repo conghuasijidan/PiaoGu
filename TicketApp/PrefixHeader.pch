@@ -43,7 +43,7 @@
 // 引入第三方类库
 #import "SDCycleScrollView.h"
 
-#import <YYModel/YYModel.h>
+//#import <YYModel/YYModel.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
