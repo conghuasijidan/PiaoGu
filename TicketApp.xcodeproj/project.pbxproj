@@ -49,6 +49,7 @@
 		F49815181EA0B45B00461AAB /* YKShowDedailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815171EA0B45B00461AAB /* YKShowDedailViewController.m */; };
 		F498151C1EA0B78F00461AAB /* YKShowDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F498151B1EA0B78F00461AAB /* YKShowDetailTableViewCell.m */; };
 		F49815221EA44FB200461AAB /* YKNiNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815211EA44FB200461AAB /* YKNiNameViewController.m */; };
+		F49815261EA460DF00461AAB /* YKPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815251EA460DF00461AAB /* YKPhotoViewController.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -143,6 +144,8 @@
 		F498151B1EA0B78F00461AAB /* YKShowDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKShowDetailTableViewCell.m; sourceTree = "<group>"; };
 		F49815201EA44FB200461AAB /* YKNiNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNiNameViewController.h; sourceTree = "<group>"; };
 		F49815211EA44FB200461AAB /* YKNiNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNiNameViewController.m; sourceTree = "<group>"; };
+		F49815241EA460DF00461AAB /* YKPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKPhotoViewController.h; sourceTree = "<group>"; };
+		F49815251EA460DF00461AAB /* YKPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKPhotoViewController.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -544,8 +547,8 @@
 			children = (
 				F4423B2C1E9F2ECC004E3E4A /* YKHomeInformationViewController.h */,
 				F4423B2D1E9F2ECC004E3E4A /* YKHomeInformationViewController.m */,
-				F49815201EA44FB200461AAB /* YKNiNameViewController.h */,
-				F49815211EA44FB200461AAB /* YKNiNameViewController.m */,
+				F49815271EA460E600461AAB /* 头像 */,
+				F49815231EA450CE00461AAB /* 昵称 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -665,6 +668,24 @@
 				F49815171EA0B45B00461AAB /* YKShowDedailViewController.m */,
 			);
 			name = "明细";
+			sourceTree = "<group>";
+		};
+		F49815231EA450CE00461AAB /* 昵称 */ = {
+			isa = PBXGroup;
+			children = (
+				F49815201EA44FB200461AAB /* YKNiNameViewController.h */,
+				F49815211EA44FB200461AAB /* YKNiNameViewController.m */,
+			);
+			name = "昵称";
+			sourceTree = "<group>";
+		};
+		F49815271EA460E600461AAB /* 头像 */ = {
+			isa = PBXGroup;
+			children = (
+				F49815241EA460DF00461AAB /* YKPhotoViewController.h */,
+				F49815251EA460DF00461AAB /* YKPhotoViewController.m */,
+			);
+			name = "头像";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -850,6 +871,7 @@
 				F4423B551E9F2ECC004E3E4A /* YKHomeMeViewController.m in Sources */,
 				F4423B581E9F3E8E004E3E4A /* YKHomeMeTableViewCell.m in Sources */,
 				F44239FC1E9720DD004E3E4A /* UIColor+Addtion.m in Sources */,
+				F49815261EA460DF00461AAB /* YKPhotoViewController.m in Sources */,
 				F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */,
 				F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */,
 				F4423B5B1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m in Sources */,
