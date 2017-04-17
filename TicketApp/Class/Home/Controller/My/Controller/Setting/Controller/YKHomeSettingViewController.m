@@ -84,7 +84,7 @@
         YKLog(@"消息设置");
     }else if (indexPath.row == 1){
         YKMaskViewController *maskVC = [[YKMaskViewController alloc] init];
-        // 不用适配iOS8 一下
+        // 不用适配iOS8 以下
         maskVC.modalPresentationStyle=UIModalPresentationOverCurrentContext;
         
         [self presentViewController:maskVC animated:YES completion:nil];

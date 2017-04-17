@@ -9,7 +9,7 @@
 #import "YKMaskViewController.h"
 #import "YKMaskTableViewCell.h"
 #define kScale (226.0/667.0)
-#define kFOODERHEIGHT 26
+#define kFOOTERHEIGHT 26
 @interface YKMaskViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,weak)YKMaskTableViewCell *selectedCell;
 
@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yk_colorWithHex:0x999999];
+    self.view.backgroundColor = [UIColor yk_colorWithHex:0x666666];
     self.view.alpha = 0.5;
     [self setupUI];
 }
@@ -38,16 +38,16 @@
     maskTableView.rowHeight = 50;
     [self.view addSubview:maskTableView];
     
-    UIView *fooderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth], kFOODERHEIGHT)];
-    fooderView.backgroundColor = [UIColor whiteColor];
-    maskTableView.tableFooterView = fooderView;
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth], kFOOTERHEIGHT)];
+    footerView.backgroundColor = [UIColor whiteColor];
+    maskTableView.tableFooterView = footerView;
     UILabel *textLabel = [[UILabel alloc] init];
     textLabel.text = @"WIFI下自动5秒刷新";
     textLabel.textColor = [UIColor yk_colorWithHex:0x666666];
     textLabel.font = [UIFont systemFontOfSize:12];
-    [fooderView addSubview:textLabel];
+    [footerView addSubview:textLabel];
     [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(fooderView);
+        make.center.equalTo(footerView);
     }];
     
 }

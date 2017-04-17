@@ -29,7 +29,7 @@
     
     UILabel *titleLab = [[UILabel alloc] init];
     titleLab.font = [UIFont systemFontOfSize:14];
-    titleLab.textColor = [UIColor yk_colorWithHex:0x333333];
+    titleLab.textColor = [UIColor yk_colorWithHex:0x000000];
     titleLab.text = @"消息设置";
     [self.contentView addSubview:titleLab];
     self.titleLab = titleLab;
@@ -52,7 +52,7 @@
     }];
     
     UIView *lineView = [[UIView alloc] init];
-    lineView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
+    lineView.backgroundColor = [UIColor yk_colorWithHex:0xe5e5e5];
     [self.contentView addSubview:lineView];
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);

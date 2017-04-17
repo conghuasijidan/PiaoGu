@@ -9,6 +9,7 @@
 #import "YKHomeInformationViewController.h"
 #import "YKInforTableViewCell.h"
 #import "YKNiNameViewController.h"
+#import "YKPhotoViewController.h"
 @interface YKHomeInformationViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 
@@ -92,6 +93,9 @@
         case 0:
         {
             YKLog(@"头像修改");
+            YKPhotoViewController *vc = [[YKPhotoViewController alloc] init];
+            vc.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+            [self presentViewController:vc animated:YES completion:nil];
         }
             break;
          case 1:
@@ -102,6 +106,7 @@
             break;
          case 2:
         {  YKLog(@"签名修改");
+           
             
         }
             break;

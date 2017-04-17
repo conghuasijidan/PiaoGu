@@ -23,6 +23,7 @@
 #define YKABOUTCELL  @"YKAbutViewControllerCell"
 #define YKBALANCECELL @"YKBalanceTableViewCell"
 #define YKSHOWDETAILCELL @"YKShowDetailTableViewCell"
+#define YKPHOTOCELL  @"YKPhotoTableViewCell"
 
 #define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 #define kSPACING 10
