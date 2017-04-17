@@ -8,6 +8,7 @@
 
 #import "YKHomeInformationViewController.h"
 #import "YKInforTableViewCell.h"
+#import "YKNiNameViewController.h"
 @interface YKHomeInformationViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 
@@ -86,6 +87,33 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            YKLog(@"头像修改");
+        }
+            break;
+         case 1:
+        { YKLog(@"昵称修改");
+            YKNiNameViewController *vc = [[YKNiNameViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+         case 2:
+        {  YKLog(@"签名修改");
+            
+        }
+            break;
+         case 3:
+        {
+            YKLog(@"账号修改");
+        }
+            break;
+        default:
+            break;
+    }
+    
 }
 
 
