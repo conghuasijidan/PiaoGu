@@ -28,8 +28,8 @@
 #pragma mark - 搭建界面
 - (void)setupUI{
     
-    float height = [UIScreen yk_screenHeight]-[UIScreen yk_screenHeight]*kScale;
-    UITableView *maskTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, height, [UIScreen yk_screenWidth], [UIScreen yk_screenHeight]*kScale) style:UITableViewStylePlain];
+    float y = [UIScreen yk_screenHeight]-[UIScreen yk_screenHeight]*kScale;
+    UITableView *maskTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, y, [UIScreen yk_screenWidth], [UIScreen yk_screenHeight]*kScale) style:UITableViewStylePlain];
     maskTableView.backgroundColor = [UIColor whiteColor];
     maskTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     maskTableView.dataSource = self;
