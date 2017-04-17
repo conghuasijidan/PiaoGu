@@ -10,7 +10,7 @@
 #import "YKSettingTableViewCell.h"
 #import "YKMaskViewController.h"
 #import "YKAbutViewController.h"
-
+#import "YKMessageViewController.h"
 
 @interface YKHomeSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -82,6 +82,9 @@
     
     if (indexPath.row == 0) {
         YKLog(@"消息设置");
+        YKMessageViewController *vc = [[YKMessageViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
     }else if (indexPath.row == 1){
         YKMaskViewController *maskVC = [[YKMaskViewController alloc] init];
         // 不用适配iOS8 以下

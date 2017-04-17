@@ -51,6 +51,7 @@
 		F49815221EA44FB200461AAB /* YKNiNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815211EA44FB200461AAB /* YKNiNameViewController.m */; };
 		F49815261EA460DF00461AAB /* YKPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815251EA460DF00461AAB /* YKPhotoViewController.m */; };
 		F498152A1EA4649300461AAB /* YKPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815291EA4649300461AAB /* YKPhotoTableViewCell.m */; };
+		F498152F1EA4734B00461AAB /* YKMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F498152E1EA4734B00461AAB /* YKMessageViewController.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -149,6 +150,8 @@
 		F49815251EA460DF00461AAB /* YKPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKPhotoViewController.m; sourceTree = "<group>"; };
 		F49815281EA4649300461AAB /* YKPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKPhotoTableViewCell.h; sourceTree = "<group>"; };
 		F49815291EA4649300461AAB /* YKPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKPhotoTableViewCell.m; sourceTree = "<group>"; };
+		F498152D1EA4734B00461AAB /* YKMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMessageViewController.h; sourceTree = "<group>"; };
+		F498152E1EA4734B00461AAB /* YKMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMessageViewController.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -620,12 +623,11 @@
 		F4423B391E9F2ECC004E3E4A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F4423B3A1E9F2ECC004E3E4A /* YKAbutViewController.h */,
-				F4423B3B1E9F2ECC004E3E4A /* YKAbutViewController.m */,
 				F4423B3C1E9F2ECC004E3E4A /* YKHomeSettingViewController.h */,
 				F4423B3D1E9F2ECC004E3E4A /* YKHomeSettingViewController.m */,
-				F4423B3E1E9F2ECC004E3E4A /* YKMaskViewController.h */,
-				F4423B3F1E9F2ECC004E3E4A /* YKMaskViewController.m */,
+				F49815301EA4735100461AAB /* 消息 */,
+				F498152C1EA4731300461AAB /* 关于 */,
+				F498152B1EA4730000461AAB /* 行情刷新 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -640,12 +642,9 @@
 		F4423B411E9F2ECC004E3E4A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4423B421E9F2ECC004E3E4A /* YKAboutTableViewCell.h */,
-				F4423B431E9F2ECC004E3E4A /* YKAboutTableViewCell.m */,
-				F4423B441E9F2ECC004E3E4A /* YKMaskTableViewCell.h */,
-				F4423B451E9F2ECC004E3E4A /* YKMaskTableViewCell.m */,
-				F4423B461E9F2ECC004E3E4A /* YKSettingTableViewCell.h */,
-				F4423B471E9F2ECC004E3E4A /* YKSettingTableViewCell.m */,
+				F49815311EA4866400461AAB /* 关于Cell */,
+				F49815321EA4867000461AAB /* 刷新Cell */,
+				F49815331EA4868900461AAB /* 设置Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -691,6 +690,60 @@
 				F49815251EA460DF00461AAB /* YKPhotoViewController.m */,
 			);
 			name = "头像";
+			sourceTree = "<group>";
+		};
+		F498152B1EA4730000461AAB /* 行情刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B3E1E9F2ECC004E3E4A /* YKMaskViewController.h */,
+				F4423B3F1E9F2ECC004E3E4A /* YKMaskViewController.m */,
+			);
+			name = "行情刷新";
+			sourceTree = "<group>";
+		};
+		F498152C1EA4731300461AAB /* 关于 */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B3A1E9F2ECC004E3E4A /* YKAbutViewController.h */,
+				F4423B3B1E9F2ECC004E3E4A /* YKAbutViewController.m */,
+			);
+			name = "关于";
+			sourceTree = "<group>";
+		};
+		F49815301EA4735100461AAB /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				F498152D1EA4734B00461AAB /* YKMessageViewController.h */,
+				F498152E1EA4734B00461AAB /* YKMessageViewController.m */,
+			);
+			name = "消息";
+			sourceTree = "<group>";
+		};
+		F49815311EA4866400461AAB /* 关于Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B421E9F2ECC004E3E4A /* YKAboutTableViewCell.h */,
+				F4423B431E9F2ECC004E3E4A /* YKAboutTableViewCell.m */,
+			);
+			name = "关于Cell";
+			sourceTree = "<group>";
+		};
+		F49815321EA4867000461AAB /* 刷新Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B441E9F2ECC004E3E4A /* YKMaskTableViewCell.h */,
+				F4423B451E9F2ECC004E3E4A /* YKMaskTableViewCell.m */,
+			);
+			name = "刷新Cell";
+			sourceTree = "<group>";
+		};
+		F49815331EA4868900461AAB /* 设置Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4423B461E9F2ECC004E3E4A /* YKSettingTableViewCell.h */,
+				F4423B471E9F2ECC004E3E4A /* YKSettingTableViewCell.m */,
+			);
+			name = "设置Cell";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -895,6 +948,7 @@
 				F418B8971E9F4AE10069FB8B /* YKCashViewController.m in Sources */,
 				F4423B1E1E9F16F5004E3E4A /* UILabel+Addition.m in Sources */,
 				F4423B511E9F2ECC004E3E4A /* YKMaskViewController.m in Sources */,
+				F498152F1EA4734B00461AAB /* YKMessageViewController.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
 				F4423AB11E9B5FE4004E3E4A /* YKInvestViewController.m in Sources */,
