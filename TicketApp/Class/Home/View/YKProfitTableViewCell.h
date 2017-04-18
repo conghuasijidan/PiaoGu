@@ -10,7 +10,7 @@
 
 @interface YKProfitTableViewCell : UITableViewCell
 
-@property(nonatomic,weak)UIImageView *bgImageView;
+@property(nonatomic,strong)UIImage *image;
 
 
 @end

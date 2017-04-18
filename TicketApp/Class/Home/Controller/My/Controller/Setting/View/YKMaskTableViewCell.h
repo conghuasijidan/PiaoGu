@@ -10,7 +10,8 @@
 
 @interface YKMaskTableViewCell : UITableViewCell
 
-@property(nonatomic,weak)UILabel *titleLab;
 @property(nonatomic,assign)BOOL selectedState;
+@property(nonatomic,copy)NSString *title;
+
 
 @end

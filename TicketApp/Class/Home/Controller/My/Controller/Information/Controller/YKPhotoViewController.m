@@ -21,7 +21,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yk_colorWithHex:0x666666];
     self.view.alpha = 0.5;
-//    self.view.backgroundColor = [UIColor yk_colorWithRed:179 green:179 blue:179];
     [self setupUI];
 
 }
@@ -34,8 +33,8 @@
     maskTableView.dataSource = self;
     maskTableView.delegate = self;
     [maskTableView registerClass:[YKPhotoTableViewCell class] forCellReuseIdentifier:YKPHOTOCELL];
-//    maskTableView.rowHeight = 50;
     [self.view addSubview:maskTableView];
+    maskTableView.tableFooterView = [[UIView alloc] init];
     
 }
 #pragma mark - 数据源 代理
@@ -63,15 +62,17 @@
     YKPhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKPHOTOCELL forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
     if (indexPath.section == 0 && indexPath.row == 0) {
-        
-        cell.titleLab.text = @"拍照";
+        cell.title = @"拍照";
+        cell.isHidden = YES;
     }else if (indexPath.section == 0 && indexPath.row == 1){
-        cell.titleLab.text = @"从手机相册中选择";
+        cell.title = @"从手机相册中选择";
+        cell.isHidden = YES;
     }else if (indexPath.section == 1 && indexPath.row == 0)
     {
-        cell.bgView.hidden = NO;
-        cell.titleLab.text = @"取消";
+        cell.isHidden = NO;
+        cell.title = @"取消";
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
@@ -92,10 +93,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return 50;
+        return 50/160.0*tableView.bounds.size.height;
     }else
     {
-        return 60;
+        return 60/160.0*tableView.bounds.size.height;
     }
 }
 

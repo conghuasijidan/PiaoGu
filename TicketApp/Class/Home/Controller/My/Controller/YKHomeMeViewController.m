@@ -11,7 +11,7 @@
 #import "YKHomeKefuViewController.h"
 #import "YKHomeSettingViewController.h"
 #import "YKHomeInformationViewController.h"
-#define HEADERHEIGHT 100
+#define HEADERHEIGHT 110
 
 @interface YKHomeMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -48,8 +48,12 @@
 #pragma mark - 搭建头部视图
 - (void)setupHeaderView{
 
+    CGRect rectTab = self.tabBarController.tabBar.frame;
+    CGRect rectNav = self.navigationController.navigationBar.frame;
+    CGFloat viewHeight = [UIScreen yk_screenHeight]- [UIScreen yk_statusHeight] - rectNav.size.height - rectTab.size.height;
+    
     // 设置tableview的HEADER
-    UIView *headerView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen yk_screenWidth] ,HEADERHEIGHT)];
+    UIView *headerView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen yk_screenWidth] ,HEADERHEIGHT/554.0*viewHeight)];
     headerView.backgroundColor = [UIColor whiteColor];
     self.meTableView.tableHeaderView = headerView;
     
@@ -57,9 +61,10 @@
     imgView.image = [UIImage imageNamed:@"me_name_placehoder"];
     [headerView addSubview:imgView];
     [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(headerView).offset(kSPACING);
-        make.top.equalTo(headerView).offset(kSPACING*2);
-        make.size.mas_equalTo(CGSizeMake(60, 60));
+        make.left.equalTo(headerView).offset(kW(kSPACING));
+//        make.centerY.equalTo(headerView);
+        make.top.equalTo(headerView).offset(20/110.0*headerView.bounds.size.height);
+        make.size.mas_equalTo(CGSizeMake(kW(60), kW(60)));
     }];
     
     UILabel *nameLabel = [[UILabel alloc] init];
@@ -102,7 +107,7 @@
     [headerView addSubview:lineView];
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(headerView);
-        make.height.mas_equalTo(kSPACING);
+        make.height.mas_equalTo(kSPACING/110.0*headerView.bounds.size.height);
     }];
     
 }
@@ -117,11 +122,7 @@
 {
 
     UIButton *exitButton = [[UIButton alloc] init];
-    [exitButton setTitle:@"退出" forState:UIControlStateNormal];
-    exitButton.titleLabel.font = [UIFont systemFontOfSize:18];
-    [exitButton setTitleColor:[UIColor yk_colorWithHex:0x666666] forState:UIControlStateNormal];
-    [exitButton setBackgroundImage:[UIImage imageNamed:@"me_exit_bg"] forState:UIControlStateNormal];
-    [exitButton setBackgroundColor:[UIColor whiteColor]];
+    [exitButton setImage:[UIImage imageNamed:@"me_exit_bg"] forState:UIControlStateNormal];
     [exitButton addTarget:self action:@selector(exitButtonAction) forControlEvents:UIControlEventTouchUpInside];
     UIWindow *window = [UIApplication sharedApplication].windows.lastObject;
     [window addSubview:exitButton];

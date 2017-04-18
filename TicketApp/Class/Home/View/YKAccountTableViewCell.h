@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YKAccountTableViewCell : UITableViewCell
+@property(nonatomic,copy)void (^balanceCallBack)();
+
 
 @end

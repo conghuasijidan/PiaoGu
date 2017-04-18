@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YKPhotoTableViewCell : UITableViewCell
-@property(nonatomic,weak)UILabel *titleLab;
-@property(nonatomic,weak)UIView *bgView;
-
+@property(nonatomic,copy)NSString *title;
+@property(nonatomic,assign)BOOL isHidden;
 
 @end

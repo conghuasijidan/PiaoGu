@@ -8,63 +8,69 @@
 
 #import "YKAccountTableViewCell.h"
 
+@interface YKAccountTableViewCell ()
+@property(nonatomic,strong)UIImageView *bgImageView;
+@property(nonatomic,strong)UIImageView *circleImageView;
+@property(nonatomic,strong)UILabel *accountLabel;
+@property(nonatomic,strong)UILabel *profitLabel;
+@property(nonatomic,strong)UIButton *detailButton;
+@property(nonatomic,strong)UILabel *balanceLabel;
+
+
+
+@end
+
 @implementation YKAccountTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self setupUI];
+        
     }
     return self;
 }
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self setupUI];
+}
+
 #pragma mark - 搭建界面
 - (void)setupUI{
     
-    UIImageView *bgImageView = [[UIImageView alloc] init];
-    bgImageView.image = [UIImage imageNamed:@"home_account_bg"];
-    [self.contentView addSubview:bgImageView];
-    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.contentView addSubview:self.bgImageView];
+    [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.bottom.equalTo(self.contentView);
     }];
-    
-    UIImageView *circleImageView = [[UIImageView alloc] init];
-    circleImageView.image = [UIImage imageNamed:@"home_account_circle_bg"];
-    [self.contentView addSubview:circleImageView];
-    [circleImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(92);
-        make.top.equalTo(self.contentView).offset(42);
-        make.size.mas_equalTo(CGSizeMake(191, 188));
+
+    [self.contentView addSubview:self.circleImageView];
+    [self.circleImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView);
+        make.centerY.equalTo(self.contentView);
+        make.size.mas_equalTo(CGSizeMake(kW(191.0), kW(192.0)));
     }];
-    UILabel *accountLabel = [UILabel yk_labelWithText:@"账户余额（元）" fontSize:12 textColor:[UIColor yk_colorWithHex:0xffffff]];
-    [self.contentView addSubview:accountLabel];
-    [accountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(2*kSPACING);
-        make.top.equalTo(self.contentView).offset(kSPACING);
+
+    [self.contentView addSubview:self.accountLabel];
+    [self.accountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentView).offset(kW(2*kSPACING));
+        make.top.equalTo(self.contentView).offset(kH(kSPACING, 274.0));
     }];
     
-    NSString *profitStr = [NSString stringWithFormat:@"昨日：+350元"];
-    UILabel *profitLabel = [UILabel yk_labelWithText:profitStr fontSize:12 textColor:[UIColor yk_colorWithHex:0xffffff]];
-    [self.contentView addSubview:profitLabel];
-    [profitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(circleImageView);
-        make.top.equalTo(circleImageView).offset(58);
+    [self.contentView addSubview:self.profitLabel];
+    [self.profitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView);
+        make.top.equalTo(self.contentView).offset(kH(100, 274.0));
     }];
-    UILabel *balanceLabel = [UILabel yk_labelWithText:@"666666.66" fontSize:30 textColor:[UIColor yk_colorWithHex:0xffffff]];
-    [self.contentView addSubview:balanceLabel];
-    [balanceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(circleImageView);
-        make.top.equalTo(profitLabel.mas_bottom).offset(kSPACING);
+
+    [self.contentView addSubview:self.balanceLabel];
+    [self.balanceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView);
+        make.top.equalTo(self.profitLabel.mas_bottom).offset(kH(kSPACING, 274.0));
     }];
     
-    UIButton *detailButton = [[UIButton alloc] init];
-    [detailButton setTitle:@"查看详情" forState:UIControlStateNormal];
-    detailButton.titleLabel.font = [UIFont systemFontOfSize:12];
-    [detailButton addTarget:self action:@selector(detailButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:detailButton];
-    //    messageButton
-    [detailButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(circleImageView);
-        make.top.equalTo(balanceLabel.mas_bottom);
+    [self.contentView addSubview:self.detailButton];
+    [self.detailButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView).offset(-5);
+        make.top.equalTo(self.balanceLabel.mas_bottom);
     }];
     
 
@@ -72,6 +78,58 @@
 }
 - (void)detailButtonAction{
     YKLog(@"查看详情");
+    if (self.balanceCallBack != nil) {
+        self.balanceCallBack();
+    }
+}
+#pragma mark - 懒加载
+- (UIImageView *)bgImageView
+{
+    if (!_bgImageView) {
+        _bgImageView = [[UIImageView alloc] init];
+        _bgImageView.image = [UIImage imageNamed:@"home_account_bg"];
+    }
+    return _bgImageView;
 }
 
+- (UIImageView *)circleImageView
+{
+    if (!_circleImageView) {
+        _circleImageView = [[UIImageView alloc] init];
+        _circleImageView.image = [UIImage imageNamed:@"home_account_circle_bg"];
+    }
+    return _circleImageView;
+}
+- (UILabel *)accountLabel
+{
+    if (!_accountLabel) {
+        _accountLabel = [UILabel yk_labelWithText:@"账户余额（元）" fontSize:12 textColor:[UIColor yk_colorWithHex:0xffffff]];
+    }
+    return _accountLabel;
+}
+- (UILabel *)profitLabel
+{
+    if (!_profitLabel) {
+        NSString *profitStr = [NSString stringWithFormat:@"昨日：+350元"];
+        _profitLabel = [UILabel yk_labelWithText:profitStr fontSize:12 textColor:[UIColor yk_colorWithHex:0xffffff]];
+    }
+    return _profitLabel;
+}
+- (UILabel *)balanceLabel
+{
+    if (!_balanceLabel) {
+        _balanceLabel = [UILabel yk_labelWithText:@"666666.66" fontSize:30 textColor:[UIColor yk_colorWithHex:0xffffff]];
+    }
+    return _balanceLabel;
+}
+- (UIButton *)detailButton
+{
+    if (!_detailButton) {
+        _detailButton = [[UIButton alloc] init];
+        [_detailButton setTitle:@"查看详情" forState:UIControlStateNormal];
+        _detailButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_detailButton addTarget:self action:@selector(detailButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _detailButton;
+}
 @end

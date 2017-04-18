@@ -13,10 +13,9 @@
 #import "YKAccountTableViewCell.h"
 #import "YKProfitTableViewCell.h"
 
-#define VIEWHEIGHT [UIScreen yk_screenHeight]
-
 @interface YKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property(nonatomic,assign)CGFloat viewHeight;
 @end
 
 @implementation YKHomeViewController
@@ -25,7 +24,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"首页";
-//    NSLog(@"%f",[UIScreen yk_screenHeight]);
+    
+    CGRect rectTab = self.tabBarController.tabBar.frame;
+    CGRect rectNav = self.navigationController.navigationBar.frame;
+    self.viewHeight = [UIScreen yk_screenHeight]- [UIScreen yk_statusHeight] - rectNav.size.height - rectTab.size.height;
     [self setupUI];
     
 }
@@ -50,29 +52,6 @@
     [self.view addSubview:tableView];
     tableView.tableFooterView = [[UIView alloc] init];
 
-    
-    
-//    UIButton *mebutton = [[UIButton alloc] init];
-//    [mebutton setTitle:@"我的" forState:UIControlStateNormal];
-//    mebutton.titleLabel.font = [UIFont systemFontOfSize:17];
-//    [mebutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [mebutton addTarget:self action:@selector(meButtonAction) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:mebutton];
-//    [mebutton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.equalTo(self.view);
-//    }];
-//    
-//    UIButton *balancebutton = [[UIButton alloc] init];
-//    [balancebutton setTitle:@"余额" forState:UIControlStateNormal];
-//    balancebutton.titleLabel.font = [UIFont systemFontOfSize:17];
-//    [balancebutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [balancebutton addTarget:self action:@selector(balanceBtnAction) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:balancebutton];
-//    [balancebutton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.equalTo(self.view);
-//        make.bottom.equalTo(mebutton).offset(-80);
-//    }];
-    
 }
 #pragma mark - 数据源 代理
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -103,11 +82,22 @@
     if (indexPath.section == 0 && indexPath.row == 0) {
         YKUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKHOMEUSERCELL forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.meCallBack = ^{
+            
+            YKHomeMeViewController *myVC = [[YKHomeMeViewController alloc] init];
+            
+            [self.navigationController pushViewController:myVC animated:YES];
+        };
         return cell;
 
     }else if (indexPath.section == 1 && indexPath.row == 0){
         YKAccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKHOMEACCOUNTCELL forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.balanceCallBack = ^{
+            YKBalanceViewController *balanceVC = [[YKBalanceViewController alloc] init];
+            [self.navigationController pushViewController:balanceVC animated:YES];
+        };
+        
         return cell;
 
     }else
@@ -116,10 +106,11 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.section == 2 && indexPath.row == 0) {
             // 判断是否投资 隐藏/开启 两个label
-            cell.bgImageView.image = [UIImage imageNamed:@"home_invest_bg"];
+            cell.image = [UIImage imageNamed:@"home_invest_bg"];
+
         }
         else{
-            cell.bgImageView.image = [UIImage imageNamed:@"home_income_bg"];
+            cell.image = [UIImage imageNamed:@"home_income_bg"];
         }
         
         return cell;
@@ -132,12 +123,12 @@
 {
     CGFloat height = 0.0;
     if (indexPath.section == 0 && indexPath.row == 0) {
-        height = [UIScreen yk_screenHeight]*(60.0/554.0);
+        height = self.viewHeight*(60.0/554.0);
     }else if (indexPath.section == 1 && indexPath.row == 0){
-        height = [UIScreen yk_screenHeight]*(274.0/554.0);
+        height = self.viewHeight*(274.0/554.0);
     }else
     {
-        height = [UIScreen yk_screenHeight]*(110.0/554.0);
+        height = self.viewHeight*(110.0/554.0);
     }
     return height;
 }
@@ -150,19 +141,5 @@
     }
 }
 
-
-#pragma mark -
-- (void)balanceBtnAction{
-    YKBalanceViewController *balanceVC = [[YKBalanceViewController alloc] init];
-    
-    [self.navigationController pushViewController:balanceVC animated:YES];
-    
-}
-- (void)meButtonAction{
-    
-    YKHomeMeViewController *myVC = [[YKHomeMeViewController alloc] init];
-    
-    [self.navigationController pushViewController:myVC animated:YES];
-}
 
 @end

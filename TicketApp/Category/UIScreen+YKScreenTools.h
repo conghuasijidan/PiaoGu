@@ -15,4 +15,7 @@
 + (CGFloat)yk_screenHeight;
 /// 分辨率
 + (CGFloat)yk_scale;
+/// 状态栏高度
++(CGFloat)yk_statusHeight;
+
 @end

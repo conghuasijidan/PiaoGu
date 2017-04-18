@@ -21,5 +21,9 @@
     return [UIScreen mainScreen].scale;
 }
 
++(CGFloat)yk_statusHeight{
+    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+    return rectStatus.size.height;
+}
 
 @end

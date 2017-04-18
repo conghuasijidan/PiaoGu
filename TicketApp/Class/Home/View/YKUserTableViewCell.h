@@ -10,4 +10,7 @@
 
 @interface YKUserTableViewCell : UITableViewCell
 
+@property(nonatomic,copy)void (^meCallBack)();
+
+
 @end

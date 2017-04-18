@@ -35,7 +35,7 @@
     maskTableView.dataSource = self;
     maskTableView.delegate = self;
     [maskTableView registerClass:[YKMaskTableViewCell class] forCellReuseIdentifier:YKMASKCELL];
-    maskTableView.rowHeight = 50;
+    maskTableView.rowHeight = 50/226.0*maskTableView.bounds.size.height;
     [self.view addSubview:maskTableView];
     
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth], kFOOTERHEIGHT)];
@@ -61,16 +61,19 @@
 {
     YKMaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKMASKCELL forIndexPath:indexPath];
     if (indexPath.row == 0) {
-        cell.titleLab.text = @"5秒";
+        cell.title = @"5秒";
         
     }else if (indexPath.row == 1){
-        cell.titleLab.text = @"15秒";
+        cell.title = @"15秒";
+
         
     }else if (indexPath.row == 2){
-        cell.titleLab.text = @"30秒";
+        cell.title = @"30秒";
+
         
     }else if (indexPath.row == 3){
-        cell.titleLab.text = @"60 秒";
+        cell.title = @"60秒";
+        
     }
     return cell;
 }

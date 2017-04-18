@@ -27,19 +27,21 @@
         make.bottom.equalTo(self.contentView);
     }];
     
-    UIImageView *iconImageView = [[UIImageView alloc] init];
-    iconImageView.image = [UIImage imageNamed:@"home_user_icon_placehoder"];
-    [iconImageView sizeToFit];
-    [self.contentView addSubview:iconImageView];
-    [iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(kSPACING *2);
-        make.top.equalTo(self.contentView).offset(15);
+    UIButton *iconButton = [[UIButton alloc] init];
+    [iconButton setImage:[UIImage imageNamed:@"home_user_icon_placehoder"] forState:UIControlStateNormal];
+    [iconButton addTarget:self action:@selector(iconButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [iconButton sizeToFit];
+    [self.contentView addSubview:iconButton];
+    [iconButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentView).offset(kW(kSPACING*2.0));
+        make.centerY.equalTo(self.contentView);
     }];
+    
     UILabel *nameLabel = [UILabel yk_labelWithText:@"火锅英雄" fontSize:14 textColor:[UIColor yk_colorWithHex:0xffffff]];
     [self.contentView addSubview:nameLabel];
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(iconImageView.mas_right).offset(8);
-        make.centerY.equalTo(iconImageView);
+        make.left.equalTo(iconButton.mas_right).offset(8);
+        make.centerY.equalTo(iconButton);
     }];
     UIButton *messageButton = [[UIButton alloc] init];
     [messageButton setImage:[UIImage imageNamed:@"home_message_normal"] forState:UIControlStateNormal];
@@ -48,8 +50,8 @@
     [self.contentView addSubview:messageButton];
 //    messageButton
     [messageButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView).offset(-kSPACING*2);
-        make.top.equalTo(self.contentView).offset(kSPACING*2);
+        make.right.equalTo(self.contentView).offset(kW(-kSPACING*2));
+        make.centerY.equalTo(self.contentView);
     }];
     
     UIView *lineView = [[UIView alloc] init];
@@ -65,6 +67,13 @@
 
 - (void)messageButtonAction{
     YKLog(@"跳转到消息界面");
+}
+
+- (void)iconButtonAction{
+    YKLog(@"跳转到我的界面");
+    if (self.meCallBack != nil) {
+        self.meCallBack();
+    }
 }
 
 @end
