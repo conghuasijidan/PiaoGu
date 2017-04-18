@@ -66,7 +66,9 @@
 }
 
 - (void)messageButtonAction{
-    YKLog(@"跳转到消息界面");
+    if (self.messageCallBack != nil) {
+        self.messageCallBack();
+    }
 }
 
 - (void)iconButtonAction{

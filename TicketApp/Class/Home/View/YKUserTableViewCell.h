@@ -11,6 +11,7 @@
 @interface YKUserTableViewCell : UITableViewCell
 
 @property(nonatomic,copy)void (^meCallBack)();
+@property(nonatomic,copy)void (^messageCallBack)();
 
 
 @end

@@ -12,7 +12,7 @@
 #import "YKUserTableViewCell.h"
 #import "YKAccountTableViewCell.h"
 #import "YKProfitTableViewCell.h"
-
+#import "YKHomeMessageViewController.h"
 @interface YKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,assign)CGFloat viewHeight;
@@ -85,8 +85,13 @@
         cell.meCallBack = ^{
             
             YKHomeMeViewController *myVC = [[YKHomeMeViewController alloc] init];
-            
+    
             [self.navigationController pushViewController:myVC animated:YES];
+        };
+        cell.messageCallBack = ^{
+            YKHomeMessageViewController *vc = [[YKHomeMessageViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
         };
         return cell;
 
