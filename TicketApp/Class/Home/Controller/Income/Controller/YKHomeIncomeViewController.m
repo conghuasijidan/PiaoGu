@@ -10,7 +10,7 @@
 #import "YKHomeInvestTableViewCell.h"
 #import "YKHomeHeaderView.h"
 #import "YKDetailViewController.h"
-
+#import "YKRecordViewController.h"
 @interface YKHomeIncomeViewController ()<UITableViewDataSource>
 @property(nonatomic,assign)CGFloat viewHeight;
 
@@ -61,7 +61,10 @@
 
 #pragma mark - 记录
 - (void)recordButtonAction{
-    YKLog(@"显示记录界面");
+    YKRecordViewController *vc = [[YKRecordViewController alloc] init];
+    
+    vc.isInvest = NO;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 数据源

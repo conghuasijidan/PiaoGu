@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YKRecordViewController : UIViewController
+@property(nonatomic,assign)BOOL isInvest;
+
 
 @end

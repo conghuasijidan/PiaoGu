@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface YKRecordTableViewCell : UITableViewCell
+@property(nonatomic,assign)BOOL isInvest;
+
+
 
 @end

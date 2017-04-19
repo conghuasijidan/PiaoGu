@@ -50,6 +50,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YKRecordTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKRECORDCELL forIndexPath:indexPath];
+    cell.isInvest = self.isInvest;
     
     return cell;
 }

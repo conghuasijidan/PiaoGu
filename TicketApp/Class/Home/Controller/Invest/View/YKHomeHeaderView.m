@@ -91,6 +91,7 @@
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
     self.bgimageView.image = self.bgImage;
     
 

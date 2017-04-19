@@ -63,6 +63,7 @@
 - (void)recordButtonAction{
     YKLog(@"显示记录界面");
     YKRecordViewController *vc = [[YKRecordViewController alloc] init];
+    vc.isInvest = YES;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

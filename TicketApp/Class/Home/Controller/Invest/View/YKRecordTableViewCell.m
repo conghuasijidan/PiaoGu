@@ -65,6 +65,14 @@
         make.left.right.bottom.equalTo(self.contentView);
         make.height.mas_equalTo(1);
     }];
+    
+    if (self.isInvest) {
+        self.sourceLabel.text = @"【投资宝】收入于外婆家（湖滨店）";
+    }else
+    {
+        self.sourceLabel.text = @"【收益票】收入于外婆家（湖滨店）";
+    }
+
 }
 #pragma mark - 控件
 - (UILabel *)weekLabel
