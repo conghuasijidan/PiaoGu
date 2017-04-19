@@ -26,6 +26,8 @@
 /// @return UIColor
 + (nonnull instancetype)yk_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue;
 
++ (nonnull instancetype)yk_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue alpha:(CGFloat)alpha;
+
 /// 生成随机颜色
 ///
 /// @return UIColor

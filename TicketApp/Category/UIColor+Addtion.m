@@ -22,6 +22,11 @@
     return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:1.0];
 }
 
++ (nonnull instancetype)yk_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue alpha:(CGFloat)alpha
+{
+    return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:alpha];
+}
+
 + (instancetype)yk_randomColor {
     u_int8_t red = arc4random_uniform(256);
     u_int8_t green = arc4random_uniform(256);

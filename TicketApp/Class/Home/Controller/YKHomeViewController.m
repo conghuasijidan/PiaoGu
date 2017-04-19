@@ -13,6 +13,9 @@
 #import "YKAccountTableViewCell.h"
 #import "YKProfitTableViewCell.h"
 #import "YKHomeMessageViewController.h"
+#import "YKHomeIncomeViewController.h"
+#import "YKHomeInvestViewController.h"
+
 @interface YKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,assign)CGFloat viewHeight;
@@ -140,9 +143,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 2 && indexPath.row == 0) {
-        YKLog(@"投资宝");
+        
+        YKHomeInvestViewController *vc = [[YKHomeInvestViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
     }else if (indexPath.section == 2 && indexPath.row == 1){
-        YKLog(@"收益票");
+        
+        YKHomeIncomeViewController *vc = [[YKHomeIncomeViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

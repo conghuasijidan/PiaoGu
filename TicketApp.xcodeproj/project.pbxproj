@@ -57,6 +57,9 @@
 		F498153C1EA48C3E00461AAB /* YKProfitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F498153B1EA48C3E00461AAB /* YKProfitTableViewCell.m */; };
 		F49815461EA5FF0C00461AAB /* YKHomeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815451EA5FF0C00461AAB /* YKHomeMessageViewController.m */; };
 		F49815491EA601BE00461AAB /* YKHomeMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815481EA601BE00461AAB /* YKHomeMessageTableViewCell.m */; };
+		F49815541EA6F35E00461AAB /* YKHomeInvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815531EA6F35E00461AAB /* YKHomeInvestViewController.m */; };
+		F49815571EA6F37400461AAB /* YKHomeIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815561EA6F37400461AAB /* YKHomeIncomeViewController.m */; };
+		F498155A1EA6FBB400461AAB /* YKHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815591EA6FBB400461AAB /* YKHomeHeaderView.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -167,6 +170,12 @@
 		F49815451EA5FF0C00461AAB /* YKHomeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeMessageViewController.m; sourceTree = "<group>"; };
 		F49815471EA601BE00461AAB /* YKHomeMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeMessageTableViewCell.h; sourceTree = "<group>"; };
 		F49815481EA601BE00461AAB /* YKHomeMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeMessageTableViewCell.m; sourceTree = "<group>"; };
+		F49815521EA6F35E00461AAB /* YKHomeInvestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeInvestViewController.h; sourceTree = "<group>"; };
+		F49815531EA6F35E00461AAB /* YKHomeInvestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeInvestViewController.m; sourceTree = "<group>"; };
+		F49815551EA6F37400461AAB /* YKHomeIncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeIncomeViewController.h; sourceTree = "<group>"; };
+		F49815561EA6F37400461AAB /* YKHomeIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeIncomeViewController.m; sourceTree = "<group>"; };
+		F49815581EA6FBB400461AAB /* YKHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeHeaderView.h; sourceTree = "<group>"; };
+		F49815591EA6FBB400461AAB /* YKHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeHeaderView.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -273,6 +282,8 @@
 			children = (
 				F4423A0D1E972A9F004E3E4A /* YKHomeViewController.h */,
 				F4423A0E1E972A9F004E3E4A /* YKHomeViewController.m */,
+				F498154E1EA6F16400461AAB /* Invest */,
+				F498154A1EA6F15100461AAB /* Income */,
 				F498153D1EA5FD5E00461AAB /* Message */,
 				F4423B1F1E9F19CC004E3E4A /* Balance */,
 				F4423AEC1E9DCC6F004E3E4A /* My */,
@@ -803,6 +814,74 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F498154A1EA6F15100461AAB /* Income */ = {
+			isa = PBXGroup;
+			children = (
+				F498154B1EA6F15100461AAB /* Controller */,
+				F498154C1EA6F15100461AAB /* Model */,
+				F498154D1EA6F15100461AAB /* View */,
+			);
+			path = Income;
+			sourceTree = "<group>";
+		};
+		F498154B1EA6F15100461AAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F49815551EA6F37400461AAB /* YKHomeIncomeViewController.h */,
+				F49815561EA6F37400461AAB /* YKHomeIncomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F498154C1EA6F15100461AAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F498154D1EA6F15100461AAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F498154E1EA6F16400461AAB /* Invest */ = {
+			isa = PBXGroup;
+			children = (
+				F498154F1EA6F16400461AAB /* Controller */,
+				F49815501EA6F16400461AAB /* Model */,
+				F49815511EA6F16400461AAB /* View */,
+			);
+			path = Invest;
+			sourceTree = "<group>";
+		};
+		F498154F1EA6F16400461AAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F49815521EA6F35E00461AAB /* YKHomeInvestViewController.h */,
+				F49815531EA6F35E00461AAB /* YKHomeInvestViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F49815501EA6F16400461AAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F49815511EA6F16400461AAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F49815581EA6FBB400461AAB /* YKHomeHeaderView.h */,
+				F49815591EA6FBB400461AAB /* YKHomeHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F4BBFA881E9642D800043CEA = {
 			isa = PBXGroup;
 			children = (
@@ -979,6 +1058,7 @@
 				F4423A0F1E972A9F004E3E4A /* YKHomeViewController.m in Sources */,
 				F4423AC01E9C7C41004E3E4A /* YKIncomeTableViewCell.m in Sources */,
 				F4423B4D1E9F2ECC004E3E4A /* YKInforTableViewCell.m in Sources */,
+				F49815541EA6F35E00461AAB /* YKHomeInvestViewController.m in Sources */,
 				F4423ABC1E9C690C004E3E4A /* YKDetailViewController.m in Sources */,
 				F4423B4C1E9F2ECC004E3E4A /* YKHomeInformationViewController.m in Sources */,
 				F4423A381E97816D004E3E4A /* TAAbstractDotView.m in Sources */,
@@ -1000,6 +1080,7 @@
 				F4423AB71E9B709C004E3E4A /* YKInvestTableViewCell.m in Sources */,
 				F4423B4E1E9F2ECC004E3E4A /* YKHomeKefuViewController.m in Sources */,
 				F4423B281E9F2E00004E3E4A /* YKBalanceViewController.m in Sources */,
+				F498155A1EA6FBB400461AAB /* YKHomeHeaderView.m in Sources */,
 				F49815221EA44FB200461AAB /* YKNiNameViewController.m in Sources */,
 				F4423B521E9F2ECC004E3E4A /* YKAboutTableViewCell.m in Sources */,
 				F4423B4F1E9F2ECC004E3E4A /* YKAbutViewController.m in Sources */,
@@ -1010,6 +1091,7 @@
 				F418B8971E9F4AE10069FB8B /* YKCashViewController.m in Sources */,
 				F4423B1E1E9F16F5004E3E4A /* UILabel+Addition.m in Sources */,
 				F4423B511E9F2ECC004E3E4A /* YKMaskViewController.m in Sources */,
+				F49815571EA6F37400461AAB /* YKHomeIncomeViewController.m in Sources */,
 				F498152F1EA4734B00461AAB /* YKMessageViewController.m in Sources */,
 				F4423A391E97816D004E3E4A /* TAAnimatedDotView.m in Sources */,
 				F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */,
