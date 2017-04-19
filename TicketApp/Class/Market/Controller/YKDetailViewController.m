@@ -8,9 +8,11 @@
 
 #import "YKDetailViewController.h"
 
-#define HEADERHEIGHT 216
+#define HEADERHEIGHT 216.0
+//#define <#macro#>
 @interface YKDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak)UITableView *detailTableView;
+@property(nonatomic,assign)CGFloat viewHeight;
 
 
 
@@ -22,6 +24,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"产品详情";
+    
+    CGRect rectTab = self.tabBarController.tabBar.frame;
+    CGRect rectNav = self.navigationController.navigationBar.frame;
+    self.viewHeight = [UIScreen yk_screenHeight]- [UIScreen yk_statusHeight] - rectNav.size.height - rectTab.size.height;
     [self setupUI];
     
     
@@ -40,18 +46,10 @@
 
 #pragma mark - 搭建头部视图
 - (void)setupHeaderView{
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth], HEADERHEIGHT)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth], HEADERHEIGHT/554.0*self.viewHeight)];
     headerView.backgroundColor = [UIColor whiteColor];
     self.detailTableView.tableHeaderView = headerView;
-    UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.image = [UIImage imageNamed:@"detail_adverimage_placehoder"];
-    [headerView addSubview:imgView];
-    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(headerView).offset(10);
-        make.right.equalTo(headerView).offset(-10);
-        make.top.equalTo(headerView).offset(20);
-        make.bottom.equalTo(headerView);
-    }];
+    
 }
 #pragma mark - 实现代理数据源方法
 
@@ -63,7 +61,7 @@
 {
     // 两种cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-    
+     
     return cell;
 }
 

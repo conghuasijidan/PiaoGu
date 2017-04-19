@@ -63,6 +63,7 @@
 		F498155D1EA7166700461AAB /* YKHomeInvestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F498155C1EA7166700461AAB /* YKHomeInvestTableViewCell.m */; };
 		F49815601EA741E900461AAB /* YKRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F498155F1EA741E900461AAB /* YKRecordViewController.m */; };
 		F49815631EA745AD00461AAB /* YKRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815621EA745AD00461AAB /* YKRecordTableViewCell.m */; };
+		F49815661EA7669100461AAB /* YKDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815651EA7669100461AAB /* YKDetailHeaderView.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -185,6 +186,8 @@
 		F498155F1EA741E900461AAB /* YKRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKRecordViewController.m; sourceTree = "<group>"; };
 		F49815611EA745AD00461AAB /* YKRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKRecordTableViewCell.h; sourceTree = "<group>"; };
 		F49815621EA745AD00461AAB /* YKRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKRecordTableViewCell.m; sourceTree = "<group>"; };
+		F49815641EA7669100461AAB /* YKDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailHeaderView.h; sourceTree = "<group>"; };
+		F49815651EA7669100461AAB /* YKDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailHeaderView.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -355,6 +358,7 @@
 				F4423AC11E9C87D2004E3E4A /* 市场cell */,
 				F4423AC21E9C87ED004E3E4A /* 投资宝cell */,
 				F4423AC31E9C8802004E3E4A /* 收益票cell */,
+				F49815671EA7669800461AAB /* 产品详情Header */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -897,6 +901,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F49815671EA7669800461AAB /* 产品详情Header */ = {
+			isa = PBXGroup;
+			children = (
+				F49815641EA7669100461AAB /* YKDetailHeaderView.h */,
+				F49815651EA7669100461AAB /* YKDetailHeaderView.m */,
+			);
+			name = "产品详情Header";
+			sourceTree = "<group>";
+		};
 		F4BBFA881E9642D800043CEA = {
 			isa = PBXGroup;
 			children = (
@@ -1103,6 +1116,7 @@
 				F4423B4F1E9F2ECC004E3E4A /* YKAbutViewController.m in Sources */,
 				F49815491EA601BE00461AAB /* YKHomeMessageTableViewCell.m in Sources */,
 				F418B8941E9F4ACD0069FB8B /* YKTopupViewController.m in Sources */,
+				F49815661EA7669100461AAB /* YKDetailHeaderView.m in Sources */,
 				F49815361EA48BD600461AAB /* YKUserTableViewCell.m in Sources */,
 				F4423A151E972ACA004E3E4A /* YKMeViewController.m in Sources */,
 				F418B8971E9F4AE10069FB8B /* YKCashViewController.m in Sources */,
