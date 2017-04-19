@@ -120,7 +120,7 @@
 {
     if (!_lineView) {
         _lineView = [[UIView alloc] init];
-        _lineView.backgroundColor = [UIColor yk_colorWithHex:0xf5f5f5];
+        _lineView.backgroundColor = [UIColor yk_colorWithRed:153 green:153 blue:153 alpha:.2];
     }
     return _lineView;
 }

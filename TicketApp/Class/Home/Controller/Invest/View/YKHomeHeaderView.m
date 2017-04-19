@@ -88,6 +88,16 @@
     }];
     
 }
+
+- (void)layoutSubviews
+{
+    self.bgimageView.image = self.bgImage;
+    
+
+}
+
+
+#pragma mark - 控价
 - (UIImageView *)bgimageView
 {
     if (!_bgimageView) {

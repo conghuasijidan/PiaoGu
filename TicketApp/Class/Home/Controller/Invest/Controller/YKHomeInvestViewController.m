@@ -10,6 +10,7 @@
 #import "YKHomeHeaderView.h"
 #import "YKHomeInvestTableViewCell.h"
 #import "YKDetailViewController.h"
+#import "YKRecordViewController.h"
 
 @interface YKHomeInvestViewController ()<UITableViewDataSource>
 @property(nonatomic,assign)CGFloat viewHeight;
@@ -51,6 +52,7 @@
     [self.view addSubview:tableView];
     // 237
     YKHomeHeaderView *headerView = [[YKHomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth],237/554.0*self.viewHeight)];
+    headerView.bgImage = [UIImage imageNamed:@"home_invest_header_bg"];
     headerView.backgroundColor = [UIColor whiteColor];
     tableView.tableHeaderView = headerView;
     tableView.tableFooterView = [[UIView alloc] init];
@@ -60,6 +62,9 @@
 #pragma mark - 记录
 - (void)recordButtonAction{
     YKLog(@"显示记录界面");
+    YKRecordViewController *vc = [[YKRecordViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 #pragma mark - 数据源
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

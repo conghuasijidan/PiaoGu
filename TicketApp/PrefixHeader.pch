@@ -29,7 +29,7 @@
 #define YKHOMEPROFITCELL @"YKProfitTableViewCell"
 #define YKHOMEMESSAGECELL @"YKHomeMessageTableViewCell"
 #define YKHOMEINVESTCELL @"YKHomeInvestTableViewCell"
-
+#define YKRECORDCELL @"YKRecordTableViewCell"
 
 #define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 #define kW(width)    (width)/355.0*[UIScreen yk_screenWidth]

@@ -1,5 +1,5 @@
 //
-//  YKHomeHeaderView.h
+//  YKRecordViewController.h
 //  TicketApp
 //
 //  Created by 葱花思鸡蛋 on 2017/4/19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YKHomeHeaderView : UIView
-@property(nonatomic,strong)UIImage *bgImage;
-
+@interface YKRecordViewController : UIViewController
 
 @end

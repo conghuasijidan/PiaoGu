@@ -25,7 +25,7 @@
     [self setChildViewControllers];
     // 改变tabBar的字体颜色
     //   
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0x999999],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0xEA173F],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
     // 未选中时字体颜色0xFFEEDD
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yk_colorWithHex:0x999999],NSForegroundColorAttributeName,nil]forState:UIControlStateNormal];
     // 设置item位置的样式
