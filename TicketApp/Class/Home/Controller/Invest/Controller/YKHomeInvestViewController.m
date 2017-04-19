@@ -8,9 +8,10 @@
 
 #import "YKHomeInvestViewController.h"
 #import "YKHomeHeaderView.h"
+#import "YKHomeInvestTableViewCell.h"
+#import "YKDetailViewController.h"
 
-
-@interface YKHomeInvestViewController ()
+@interface YKHomeInvestViewController ()<UITableViewDataSource>
 @property(nonatomic,assign)CGFloat viewHeight;
 @property(nonatomic,weak)UITableView *tableView;
 
@@ -43,19 +44,40 @@
 - (void)setupUI{
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.backgroundColor = [UIColor whiteColor];
-
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.dataSource = self;
+    [tableView registerClass:[YKHomeInvestTableViewCell class] forCellReuseIdentifier:YKHOMEINVESTCELL];
+    tableView.rowHeight = 135.0/554.0*self.viewHeight;
     [self.view addSubview:tableView];
-    // 200
+    // 237
     YKHomeHeaderView *headerView = [[YKHomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen yk_screenWidth],237/554.0*self.viewHeight)];
     headerView.backgroundColor = [UIColor whiteColor];
-    
     tableView.tableHeaderView = headerView;
+    tableView.tableFooterView = [[UIView alloc] init];
     
 }
 
 #pragma mark - 记录
 - (void)recordButtonAction{
-    
+    YKLog(@"显示记录界面");
+}
+#pragma mark - 数据源
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YKHomeInvestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKHOMEINVESTCELL forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.detailBlock = ^(NSString *model) {
+        
+        YKDetailViewController *detailVC = [[YKDetailViewController alloc] init];
+        
+        [self.navigationController pushViewController:detailVC animated:YES];
+
+    };
+    return cell;
 }
 
 @end
