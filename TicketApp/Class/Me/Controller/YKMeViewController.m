@@ -31,17 +31,11 @@
 #pragma mark - 搭建界面
 - (void)setupUI{
     
+    
+    
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-//{
-//    if (section == 1) {
-//        return [UIScreen yk_screenHeight] - 3*50-174;
-//    }else
-//    {
-//    return 0;
-//    }
-//}
+
 
 
 @end

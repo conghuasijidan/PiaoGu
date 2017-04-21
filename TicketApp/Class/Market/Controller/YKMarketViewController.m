@@ -169,14 +169,12 @@
 }
 #pragma mark - 投资宝和收益票
 - (void)investBtnAction{
-    YKLog(@"跳转投资宝页面");
     YKInvestViewController *investVC = [[YKInvestViewController alloc] init];
     
     [self.navigationController pushViewController:investVC animated:YES];
 }
 
 - (void)incomeBtnAction{
-    YKLog(@"跳转收益票页面");
     YKIncomeViewController *incomeVC = [[YKIncomeViewController alloc] init];
     
     [self.navigationController pushViewController:incomeVC animated:YES];

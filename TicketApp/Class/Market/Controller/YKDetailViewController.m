@@ -18,8 +18,7 @@
 @interface YKDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak)UITableView *detailTableView;
 @property(nonatomic,assign)CGFloat viewHeight;
-
-
+@property(nonatomic,weak)UIView *bottomView;
 
 @end
 
@@ -29,6 +28,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"产品详情";
+    self.tabBarController.tabBar.hidden = YES;
     
     CGRect rectTab = self.tabBarController.tabBar.frame;
     CGRect rectNav = self.navigationController.navigationBar.frame;
@@ -36,6 +36,15 @@
     [self setupUI];
     
     
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self setupBottomView];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.bottomView removeFromSuperview];
+    self.tabBarController.tabBar.hidden = NO;
 }
 #pragma mark - 搭建界面
 - (void)setupUI{
@@ -47,19 +56,14 @@
     [detailTableView registerClass:[YKDetailTwoTableViewCell class] forCellReuseIdentifier:YKMARKETDETAILTWOCELL];
     [detailTableView registerClass:[YKDetailThreeTableViewCell class] forCellReuseIdentifier:YKMARKETDETAILTHREECELL];
     [detailTableView registerClass:[YKDetailCommentTableViewCell class] forCellReuseIdentifier:YKMARKETDETAILCOMMENTCELL];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
+    detailTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     detailTableView.estimatedRowHeight = 200;
     detailTableView.rowHeight = UITableViewAutomaticDimension;
-//    UITableViewCell *cell = [detailTableView cellForRowAtIndexPath:indexPath];
-//    if ([cell isKindOfClass:[YKDetailOneTableViewCell class]]) {
-//       
-//    }
-    
+
     [self.view addSubview:detailTableView];
     self.detailTableView = detailTableView;
     [self setupHeaderView];
+//    [self setupFooderView];
 }
 
 #pragma mark - 搭建头部视图
@@ -69,14 +73,47 @@
     self.detailTableView.tableHeaderView = headerView;
     
 }
+#pragma mark - 搭建底部视图
+- (void)setupBottomView{
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor = [UIColor whiteColor];
+    UIWindow *window = [UIApplication sharedApplication].windows.lastObject;
+    [window addSubview:bottomView];
+    self.bottomView = bottomView;
+    
+    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(window);
+        make.height.mas_equalTo(49);
+    }];
+    
+    UIButton *commentButton = [[UIButton alloc] init];
+    [commentButton setBackgroundImage:[UIImage imageNamed:@"market_comment_btn_normal"] forState:UIControlStateNormal];
+    [bottomView addSubview:commentButton];
+    [commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.bottom.equalTo(bottomView);
+        make.right.equalTo(bottomView).multipliedBy(0.32);
+    }];
+    
+    UIButton *investButton = [[UIButton alloc] init];
+    [investButton setBackgroundImage:[UIImage imageNamed:@"market_detail_invest_btn"] forState:UIControlStateNormal];
+    [bottomView addSubview:investButton];
+    
+    [investButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(commentButton.mas_right);
+        make.bottom.top.right.equalTo(bottomView);
+    }];
+    
+}
+
 #pragma mark - 实现代理数据源方法
-- (NSInteger)tableView:(UITableView *)tableView numberOfsection:(NSInteger)section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     NSInteger num = 0;
     switch (section) {
         case 0:
@@ -95,56 +132,35 @@
             break;
     }
     
-    return 10;
+  return num;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 两种cell
     if (indexPath.section == 0 && indexPath.row == 0) {
         YKDetailOneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKMARKETDETAILONECELL forIndexPath:indexPath];
-    
+
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.section == 1 && indexPath.row == 0){
      YKDetailTwoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKMARKETDETAILTWOCELL forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.section == 2 && indexPath.row == 0){
         YKDetailThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKMARKETDETAILTHREECELL forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         return cell;
     }else
     {
         YKDetailCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YKMARKETDETAILCOMMENTCELL forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         return cell;
     }
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    CGFloat rowHeight = 0;
-//    if (indexPath.section == 0 ) {
-//        tableView.rowHeight = UITableViewAutomaticDimension;
-//    }else if (indexPath.section == 1)
-//    {
-//        rowHeight = UITableViewAutomaticDimension;
-//    }else if (indexPath.section == 2)
-//    {
-//        rowHeight = 130.0;
-//    }else
-//    {
-//        rowHeight = 100.0;
-//    }
-//    return rowHeight;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    CGFloat rowHeight = 0;
-//    if (indexPath.section == 0) {
-//        rowHeight = 213.0;
-//    }else if (indexPath.section == 2){
-//        rowHeight = 106.0;
-//    }
-//    
-//    return rowHeight;
-//}
+
+
 
 @end

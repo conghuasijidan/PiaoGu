@@ -52,7 +52,7 @@
     }];
     
     UILabel *descLabel = [[UILabel alloc] init];
-    NSString *textStr = @"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱";
+    NSString *textStr = @"杭州知名中餐连锁餐厅，成立于1998年，广受长三角人民喜爱，大家好才是真的好";
     descLabel.font = [UIFont systemFontOfSize:12];
     descLabel.textColor = [UIColor yk_colorWithHex:0x999999];
     descLabel.numberOfLines = 2;
@@ -99,7 +99,6 @@
 }
 #pragma mark - 跳转详情页面
 - (void)detailButtonAction{
-    YKLog(@"跳转详情页面");
     if (self.detailBlock != nil) {
         NSString *model = @"我是model";
         self.detailBlock(model);

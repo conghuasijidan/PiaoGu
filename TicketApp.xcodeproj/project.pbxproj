@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5FAEA6B536417DB6ECC340A5 /* Pods_TicketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */; };
+		F40461131EA99CB000A48FBC /* YKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F40461121EA99CB000A48FBC /* YKSlider.m */; };
 		F418B8941E9F4ACD0069FB8B /* YKTopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418B8931E9F4ACD0069FB8B /* YKTopupViewController.m */; };
 		F418B8971E9F4AE10069FB8B /* YKCashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F418B8961E9F4AE10069FB8B /* YKCashViewController.m */; };
 		F44239F71E971DE4004E3E4A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44239F41E971DE4004E3E4A /* TabBarViewController.m */; };
@@ -78,6 +79,8 @@
 		2FD23CB1DE8FC5037980DE87 /* Pods-TicketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketApp/Pods-TicketApp.release.xcconfig"; sourceTree = "<group>"; };
 		D0CBF5E830A100F7A5EE5515 /* Pods_TicketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40461111EA99CB000A48FBC /* YKSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSlider.h; sourceTree = "<group>"; };
+		F40461121EA99CB000A48FBC /* YKSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSlider.m; sourceTree = "<group>"; };
 		F418B8921E9F4ACD0069FB8B /* YKTopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTopupViewController.h; sourceTree = "<group>"; };
 		F418B8931E9F4ACD0069FB8B /* YKTopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTopupViewController.m; sourceTree = "<group>"; };
 		F418B8951E9F4AE10069FB8B /* YKCashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCashViewController.h; sourceTree = "<group>"; };
@@ -236,6 +239,60 @@
 				5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F40461141EA99CBE00A48FBC /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				F49815641EA7669100461AAB /* YKDetailHeaderView.h */,
+				F49815651EA7669100461AAB /* YKDetailHeaderView.m */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		F40461151EA99CDB00A48FBC /* OneCell */ = {
+			isa = PBXGroup;
+			children = (
+				F49815681EA854F900461AAB /* YKDetailOneTableViewCell.h */,
+				F49815691EA854F900461AAB /* YKDetailOneTableViewCell.m */,
+			);
+			name = OneCell;
+			sourceTree = "<group>";
+		};
+		F40461161EA99CEB00A48FBC /* TwoCell */ = {
+			isa = PBXGroup;
+			children = (
+				F498156B1EA8550B00461AAB /* YKDetailTwoTableViewCell.h */,
+				F498156C1EA8550B00461AAB /* YKDetailTwoTableViewCell.m */,
+			);
+			name = TwoCell;
+			sourceTree = "<group>";
+		};
+		F40461171EA99CF500A48FBC /* ThreeCell */ = {
+			isa = PBXGroup;
+			children = (
+				F498156E1EA8551B00461AAB /* YKDetailThreeTableViewCell.h */,
+				F498156F1EA8551B00461AAB /* YKDetailThreeTableViewCell.m */,
+			);
+			name = ThreeCell;
+			sourceTree = "<group>";
+		};
+		F40461181EA99D0300A48FBC /* 评论Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F49815741EA855AE00461AAB /* YKDetailCommentTableViewCell.h */,
+				F49815751EA855AE00461AAB /* YKDetailCommentTableViewCell.m */,
+			);
+			name = "评论Cell";
+			sourceTree = "<group>";
+		};
+		F40461191EA99D1B00A48FBC /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				F40461111EA99CB000A48FBC /* YKSlider.h */,
+				F40461121EA99CB000A48FBC /* YKSlider.m */,
+			);
+			name = Slider;
 			sourceTree = "<group>";
 		};
 		F418B8981E9F55FC0069FB8B /* 充值 */ = {
@@ -916,16 +973,12 @@
 		F49815671EA7669800461AAB /* 产品详情 */ = {
 			isa = PBXGroup;
 			children = (
-				F49815641EA7669100461AAB /* YKDetailHeaderView.h */,
-				F49815651EA7669100461AAB /* YKDetailHeaderView.m */,
-				F49815681EA854F900461AAB /* YKDetailOneTableViewCell.h */,
-				F49815691EA854F900461AAB /* YKDetailOneTableViewCell.m */,
-				F498156B1EA8550B00461AAB /* YKDetailTwoTableViewCell.h */,
-				F498156C1EA8550B00461AAB /* YKDetailTwoTableViewCell.m */,
-				F498156E1EA8551B00461AAB /* YKDetailThreeTableViewCell.h */,
-				F498156F1EA8551B00461AAB /* YKDetailThreeTableViewCell.m */,
-				F49815741EA855AE00461AAB /* YKDetailCommentTableViewCell.h */,
-				F49815751EA855AE00461AAB /* YKDetailCommentTableViewCell.m */,
+				F40461141EA99CBE00A48FBC /* Header */,
+				F40461151EA99CDB00A48FBC /* OneCell */,
+				F40461161EA99CEB00A48FBC /* TwoCell */,
+				F40461171EA99CF500A48FBC /* ThreeCell */,
+				F40461181EA99D0300A48FBC /* 评论Cell */,
+				F40461191EA99D1B00A48FBC /* Slider */,
 			);
 			name = "产品详情";
 			sourceTree = "<group>";
@@ -1010,7 +1063,7 @@
 				TargetAttributes = {
 					F4BBFA901E9642D800043CEA = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = DHBXPM53W4;
+						DevelopmentTeam = 9TDA7J4V7G;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1118,6 +1171,7 @@
 				F498152A1EA4649300461AAB /* YKPhotoTableViewCell.m in Sources */,
 				F49815261EA460DF00461AAB /* YKPhotoViewController.m in Sources */,
 				F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */,
+				F40461131EA99CB000A48FBC /* YKSlider.m in Sources */,
 				F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */,
 				F4423B5B1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m in Sources */,
 				F49815761EA855AE00461AAB /* YKDetailCommentTableViewCell.m in Sources */,
@@ -1274,7 +1328,7 @@
 			baseConfigurationReference = 2FD23CB1DE8FC5037980DE87 /* Pods-TicketApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DHBXPM53W4;
+				DEVELOPMENT_TEAM = 9TDA7J4V7G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TicketApp/PrefixHeader.pch";
 				INFOPLIST_FILE = TicketApp/Info.plist;
@@ -1291,7 +1345,7 @@
 			baseConfigurationReference = 5D871D7907CDE30EF3A1180F /* Pods-TicketApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DHBXPM53W4;
+				DEVELOPMENT_TEAM = 9TDA7J4V7G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TicketApp/PrefixHeader.pch";
 				INFOPLIST_FILE = TicketApp/Info.plist;
