@@ -64,6 +64,10 @@
 		F49815601EA741E900461AAB /* YKRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F498155F1EA741E900461AAB /* YKRecordViewController.m */; };
 		F49815631EA745AD00461AAB /* YKRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815621EA745AD00461AAB /* YKRecordTableViewCell.m */; };
 		F49815661EA7669100461AAB /* YKDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815651EA7669100461AAB /* YKDetailHeaderView.m */; };
+		F498156A1EA854F900461AAB /* YKDetailOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815691EA854F900461AAB /* YKDetailOneTableViewCell.m */; };
+		F498156D1EA8550B00461AAB /* YKDetailTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F498156C1EA8550B00461AAB /* YKDetailTwoTableViewCell.m */; };
+		F49815701EA8551B00461AAB /* YKDetailThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F498156F1EA8551B00461AAB /* YKDetailThreeTableViewCell.m */; };
+		F49815761EA855AE00461AAB /* YKDetailCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F49815751EA855AE00461AAB /* YKDetailCommentTableViewCell.m */; };
 		F4BBFA961E9642D800043CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA951E9642D800043CEA /* main.m */; };
 		F4BBFA991E9642D800043CEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFA981E9642D800043CEA /* AppDelegate.m */; };
 		F4BBFAA11E9642D800043CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFAA01E9642D800043CEA /* Assets.xcassets */; };
@@ -188,6 +192,14 @@
 		F49815621EA745AD00461AAB /* YKRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKRecordTableViewCell.m; sourceTree = "<group>"; };
 		F49815641EA7669100461AAB /* YKDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailHeaderView.h; sourceTree = "<group>"; };
 		F49815651EA7669100461AAB /* YKDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailHeaderView.m; sourceTree = "<group>"; };
+		F49815681EA854F900461AAB /* YKDetailOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailOneTableViewCell.h; sourceTree = "<group>"; };
+		F49815691EA854F900461AAB /* YKDetailOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailOneTableViewCell.m; sourceTree = "<group>"; };
+		F498156B1EA8550B00461AAB /* YKDetailTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailTwoTableViewCell.h; sourceTree = "<group>"; };
+		F498156C1EA8550B00461AAB /* YKDetailTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailTwoTableViewCell.m; sourceTree = "<group>"; };
+		F498156E1EA8551B00461AAB /* YKDetailThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailThreeTableViewCell.h; sourceTree = "<group>"; };
+		F498156F1EA8551B00461AAB /* YKDetailThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailThreeTableViewCell.m; sourceTree = "<group>"; };
+		F49815741EA855AE00461AAB /* YKDetailCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailCommentTableViewCell.h; sourceTree = "<group>"; };
+		F49815751EA855AE00461AAB /* YKDetailCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailCommentTableViewCell.m; sourceTree = "<group>"; };
 		F4BBFA911E9642D800043CEA /* TicketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BBFA951E9642D800043CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4BBFA971E9642D800043CEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -358,7 +370,7 @@
 				F4423AC11E9C87D2004E3E4A /* 市场cell */,
 				F4423AC21E9C87ED004E3E4A /* 投资宝cell */,
 				F4423AC31E9C8802004E3E4A /* 收益票cell */,
-				F49815671EA7669800461AAB /* 产品详情Header */,
+				F49815671EA7669800461AAB /* 产品详情 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -901,13 +913,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F49815671EA7669800461AAB /* 产品详情Header */ = {
+		F49815671EA7669800461AAB /* 产品详情 */ = {
 			isa = PBXGroup;
 			children = (
 				F49815641EA7669100461AAB /* YKDetailHeaderView.h */,
 				F49815651EA7669100461AAB /* YKDetailHeaderView.m */,
+				F49815681EA854F900461AAB /* YKDetailOneTableViewCell.h */,
+				F49815691EA854F900461AAB /* YKDetailOneTableViewCell.m */,
+				F498156B1EA8550B00461AAB /* YKDetailTwoTableViewCell.h */,
+				F498156C1EA8550B00461AAB /* YKDetailTwoTableViewCell.m */,
+				F498156E1EA8551B00461AAB /* YKDetailThreeTableViewCell.h */,
+				F498156F1EA8551B00461AAB /* YKDetailThreeTableViewCell.m */,
+				F49815741EA855AE00461AAB /* YKDetailCommentTableViewCell.h */,
+				F49815751EA855AE00461AAB /* YKDetailCommentTableViewCell.m */,
 			);
-			name = "产品详情Header";
+			name = "产品详情";
 			sourceTree = "<group>";
 		};
 		F4BBFA881E9642D800043CEA = {
@@ -1100,12 +1120,15 @@
 				F4423A411E978396004E3E4A /* YKMarketTableViewCell.m in Sources */,
 				F4423AA81E9B21C3004E3E4A /* UIScreen+YKScreenTools.m in Sources */,
 				F4423B5B1E9F3F8F004E3E4A /* YKBalanceTableViewCell.m in Sources */,
+				F49815761EA855AE00461AAB /* YKDetailCommentTableViewCell.m in Sources */,
 				F4423A3B1E97816D004E3E4A /* TAPageControl.m in Sources */,
 				F4423A3C1E97816D004E3E4A /* SDCollectionViewCell.m in Sources */,
+				F498156A1EA854F900461AAB /* YKDetailOneTableViewCell.m in Sources */,
 				F49815461EA5FF0C00461AAB /* YKHomeMessageViewController.m in Sources */,
 				F49815631EA745AD00461AAB /* YKRecordTableViewCell.m in Sources */,
 				F44239F81E971DE4004E3E4A /* YKNavController.m in Sources */,
 				F49815391EA48C2200461AAB /* YKAccountTableViewCell.m in Sources */,
+				F498156D1EA8550B00461AAB /* YKDetailTwoTableViewCell.m in Sources */,
 				F4423AB71E9B709C004E3E4A /* YKInvestTableViewCell.m in Sources */,
 				F4423B4E1E9F2ECC004E3E4A /* YKHomeKefuViewController.m in Sources */,
 				F49815601EA741E900461AAB /* YKRecordViewController.m in Sources */,
@@ -1136,6 +1159,7 @@
 				F498155D1EA7166700461AAB /* YKHomeInvestTableViewCell.m in Sources */,
 				F4423A3E1E97816D004E3E4A /* UIView+SDExtension.m in Sources */,
 				F4423A3D1E97816D004E3E4A /* SDCycleScrollView.m in Sources */,
+				F49815701EA8551B00461AAB /* YKDetailThreeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

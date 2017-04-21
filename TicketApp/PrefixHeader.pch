@@ -31,6 +31,11 @@
 #define YKHOMEINVESTCELL @"YKHomeInvestTableViewCell"
 #define YKRECORDCELL @"YKRecordTableViewCell"
 
+#define YKMARKETDETAILONECELL @"YKDetailOneTableViewCell"
+#define YKMARKETDETAILTWOCELL @"YKDetailTwoTableViewCell"
+#define YKMARKETDETAILTHREECELL @"YKDetailThreeTableViewCell"
+#define YKMARKETDETAILCOMMENTCELL @"YKDetailMarketTableViewCell"
+
 #define KRATE  [UIScreen yk_screenWidth]/[UIScreen yk_screenHeight]
 #define kW(width)    (width)/355.0*[UIScreen yk_screenWidth]
 #define kH(h,H)    h/H*self.contentView.bounds.size.height
